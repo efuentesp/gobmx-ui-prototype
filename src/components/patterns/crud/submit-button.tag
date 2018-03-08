@@ -1,8 +1,8 @@
 <submit-button>
-  <button class={ btnType() } type="button">
+  <a href={opts.to} class={ btnType() }>
     <span class={ btnIcon() }></span>
     { btnLabel() }
-  </button>
+  </a>
 
 	<script>
 		this.goToRef = function(){
@@ -14,7 +14,7 @@
       { type: "update", button: { label: "Guardar", class: "btn btn-primary", icon: "glyphicon glyphicon-floppy-disk" } },
       { type: "delete", button: { label: "Eliminar", class: "btn btn-danger", icon: "glyphicon glyphicon-trash" } },
       { type: "unknown", button: { label: "...", class: "btn btn-default", icon: "glyphicon glyphicon-asterisk" } },
-      { type: "return", button: { label: "Regresar", class: "btn btn-default", icon: "glyphicon glyphicon-chevron-left" } },
+      { type: "return", button: { label: "Regresar", class: "btn btn-link", icon: "glyphicon glyphicon-chevron-left" } },
       { type: "add", button: { label: "", class: "btn btn-default", icon: "glyphicon glyphicon-plus" } },
   	  { type: "search", button: { label: "Buscar", class: "btn btn-primary", icon: "glyphicon glyphicon-search" } },
   	  { type: "custom", button: { label: opts.caption, class: "btn btn-primary", icon: opts.icon } }

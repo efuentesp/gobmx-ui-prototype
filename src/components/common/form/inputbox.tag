@@ -13,10 +13,10 @@
   <script>
 
 	var inputboxes = [
-		{ type: "email",    inputbox: { icon: "fa fa-envelope-o", class: "input-group-addon", div: "input-group" } },
-		{ type: "currency", inputbox: { icon: "fa fa-usd",        class: "input-group-addon", div: "input-group" } },
-		{ type: "password", inputbox: { icon: "fa fa-lock",       class: "input-group-addon", div: "input-group" } },
-		{ type: "phone",    inputbox: { icon: "fa fa-phone",      class: "input-group-addon", div: "input-group" } },
+		{ type: "email",    inputbox: { icon: "glyphicon glyphicon-envelope", class: "input-group-addon", div: "input-group" } },
+		{ type: "currency", inputbox: { icon: "glyphicon glyphicon-usd",        class: "input-group-addon", div: "input-group" } },
+		{ type: "password", inputbox: { icon: "glyphicon glyphicon-lock",       class: "input-group-addon", div: "input-group" } },
+		{ type: "phone",    inputbox: { icon: "glyphicon glyphicon-earphone",      class: "input-group-addon", div: "input-group" } },
 		{ type: "default",  inputbox: { icon: "",                 class: "",                  div: "form-group"  } }
 	]
 
