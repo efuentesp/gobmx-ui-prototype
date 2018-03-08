@@ -2,11 +2,11 @@
  <table class="table table-striped" id={opts.id}>
        <thead>
          <tr>
-           <th each={header, index in headers}> 
-             <inputbox placeholder={header.label} id={this.opts.id+index}> </inputbox> 
+           <th each={header, index in headers}>
+             <inputbox placeholder={header.label} id={this.opts.id+index}> </inputbox>
            </th>
-           <th> 
-              <a href="/cliente-administrar/" onclick={addRow} class="btn btn-primary btn-sm">
+           <th>
+              <a href="/cliente-admin/" onclick={addRow} class="btn btn-primary btn-sm">
                 <i class="fa fa-plus"></i>
               </a>
            </th>
@@ -16,12 +16,12 @@
          </tr>
        </thead>
        <tbody>
-       <tr each={row, index in rows}> 
+       <tr each={row, index in rows}>
            <td each={d , i in row.data }>
              {d}
            </td>
            <td>
-               <a href="/cliente-administrar/" onclick={removeRow} class="btn btn-danger btn-sm">
+               <a href="/cliente-admin/" onclick={removeRow} class="btn btn-danger btn-sm">
                  <i class="fa fa-trash"></i>
                </a>
            </td>
