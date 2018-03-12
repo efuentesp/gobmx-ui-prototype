@@ -3,7 +3,7 @@
   <br/>
   <row>
     <div class="col-md-12">
-      <h2>{opts.title}</h2>
+      <h2>{ this.parent.opts.title }</h2>
       <hr class="red" />
       <content>
         <yield />
