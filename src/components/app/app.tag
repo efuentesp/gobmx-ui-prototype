@@ -11,6 +11,7 @@
     <top-menu label="Clientes">
       <menu-item label="Administrar" to="/cliente-admin/" />
       <menu-item label="Wizard" to="/cliente-wizard/" />
+	  <menu-item label="Agregar" to="/cliente-agregar/" />
     </top-menu>
     <!-- <menu-item label="Enlace 3" to="/imss-registrar-pension/" />
     <menu-item label="Enlace 4" to="/imss-registrar-pension/" /> -->

@@ -45,6 +45,10 @@
   				<option-box id="ipx" label="Incapacidad Permanente Parcial" />
   				<option-box id="ipy" label="Incapacidad Permanente Total" selected=true/>
   			</select-box>
+			<select-auto id="tipoPension" placeholder="Selecciona el Tipo de Pensión deseada" required=true disabled=false>
+				<option id="ipp" label="Incapacidad Permanente Parcial" />
+				<option id="ipt" label="Incapacidad Permanente Total" />
+			</select-auto>
   		</panel>
 		<actions>
 			<action-group title="Cargos">
