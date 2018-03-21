@@ -1,68 +1,70 @@
 <select-list>
- <div class="row">
-  <div class="col-md-5 col-xs-5">
-   <br/>
-   <span class="section">{ opts.fromtitle }</span>
-   <table id="table_source" class="table table-striped table-bordered bulk_action">
-       <thead>
-         <tr>
-           <th></th>
-           <th each={headers}> {label} </th>
-         </tr>
-       </thead>
-       <tbody>
-       <tr class="" each={row, index in rows}> 
-           <td>
-             <input type="checkbox" id="check-all" class="flat">
-           </td>
-           <td each={d , i in row.data }>
-             {d}
-           </td>
-       </tr>
-       </tbody>
-   </table>
-   <pagination-bar if={opts.pagination=="true"} label="Total de registros encontrados: {this.rows.length}" previous="Anterior" next="Siguiente"/>
-  </div>
-  
-  <div class="col-md-1 col-xs-1">
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <button onclick={addRow} class="btn btn-primary btn-sm">
-                <i class="fa fa-arrow-right"></i>
-    </button>
-    <button onclick={removeRow} class="btn btn-primary btn-sm">
-                <i class="fa fa-arrow-left"></i>
-    </button>
-  </div>
-  <div class="col-md-5 col-xs-5">
-   <br/>
-   <span class="section">{ opts.totitle }</span>
-   <table id="table_target" class="table table-striped table-bordered bulk_action">
-    <thead>
-        <tr>
-           <th></th>
-           <th each={headers}> {label} </th>
-        </tr>
-    </thead>
-    <tbody>
-       <tr if={row.id!=-1} each={row, index in rowstarget} class="" id={index+'tr'}> 
-           <td>
-             <div class="icheckbox_flat-green" style="position: relative;" onclick={select} id={index}>
-             <input type="checkbox" id="check-all" class="flat" style="position: relative; opacity:0;">
-             </div>
-           </td>
-           <td each={d , i in row.data }>
-             {d}
-           </td>
-       </tr>
-    </tbody>
-    </table>
-    <pagination-bar if={opts.pagination=="true"} label="Total de registros encontrados: {this.rows.length}" previous="Anterior" next="Siguiente"/>
-   </div>
+ <div class="row divRow">
+    <div class="col-md-5">
+       <span class="section">{ opts.fromtitle }</span>
+       <table id="table_source" class="table table-striped table-bordered bulk_action">
+         <thead>
+           <tr>
+             <th></th>
+             <th each={headers}> {label} </th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr class="" each={row, index in rows}>
+             <td>
+               <input type="checkbox" id="check-all" class="flat">
+             </td>
+             <td each={d , i in row.data }>
+               {d}
+             </td>
+           </tr>
+         </tbody>
+       </table>
+       <pagination-bar if={opts.pagination=="true"} label="Total de registros encontrados: {this.rows.length}" previous="Anterior" next="Siguiente"/>
+    </div>
+    <div class="col-md-2" class="btn-group-vertical" role="group" style="position: relative; top: 100px; text-align: center;">
+       <!--button onclick={addRow} class="btn btn-primary btn-sm"><i class="fa fa-arrow-right"></i></button>
+       <button onclick={removeRow} class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i></button-->
+       <submit-button to="/cliente-admin/" action="create" onclick={addRow} tamanio="btn-xs"></submit-button>
+       <submit-button to="/cliente-admin/" action="delete" onclick={removeRow} tamanio="btn-xs"></submit-button>
+    </div>
+    <div class="col-md-5">
+      <span class="section">{ opts.totitle }</span>
+      <table id="table_target" class="table table-striped table-bordered bulk_action">
+        <thead>
+          <tr>
+            <th></th>
+            <th each={headers}> {label} </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr if={row.id!=-1} each={row, index in rowstarget} class="" id={index+'tr'}>
+             <td>
+               <div class="icheckbox_flat-green" style="position: relative;" onclick={select} id={index}>
+               <input type="checkbox" id="check-all" class="flat" style="position: relative; opacity:0;">
+               </div>
+             </td>
+             <td each={d , i in row.data }>
+               {d}
+             </td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-bar if={opts.pagination=="true"} label="Total de registros encontrados: {this.rows.length}" previous="Anterior" next="Siguiente"/>
+     </div>
  </div>
-     <script>
+ <br />
+ <!--div style="border: 0px solid orange; height: 100px; position: relative;">
+</div-->
+
+ <style>
+    .divRow {
+      border: 1px solid #DDDDDD;
+      margin: 0px;
+    }
+ </style>
+
+ <script>
       this.deleted=0;
       this.headerstarget=[];
       this.rowstarget=[];
@@ -126,5 +128,5 @@
           }
     }
 
-    </script>
+ </script>
 </select-list>

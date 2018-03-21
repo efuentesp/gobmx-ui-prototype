@@ -1,18 +1,17 @@
 <simple-admin>
- <table class="table table-striped" id={opts.id}>
+ <table class="table table-striped table-bordered" id={opts.id} >
        <thead>
          <tr>
            <th each={header, index in headers}>
              <inputbox placeholder={header.label} id={this.opts.id+index}> </inputbox>
            </th>
-           <th>
-              <a href="/cliente-admin/" onclick={addRow} class="btn btn-primary btn-sm">
-                <i class="fa fa-plus"></i>
-              </a>
+           <th style="text-align: center; vertical-align:middle;" >
+              <submit-button to="/cliente-admin/" action="create" onclick={addRow} tamanio="btn-xs"></submit-button>
            </th>
          </tr>
          <tr>
            <th each={headers}> {label} </th>
+           <th></th>
          </tr>
        </thead>
        <tbody>
@@ -20,10 +19,8 @@
            <td each={d , i in row.data }>
              {d}
            </td>
-           <td>
-               <a href="/cliente-admin/" onclick={removeRow} class="btn btn-danger btn-sm">
-                 <i class="fa fa-trash"></i>
-               </a>
+           <td style="text-align: center; vertical-align:middle;">
+               <submit-button to="/cliente-admin/" action="delete" onclick={removeRow} tamanio="btn-xs"></submit-button>
            </td>
        </tr>
        </tbody>

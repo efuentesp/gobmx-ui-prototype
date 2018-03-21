@@ -1,5 +1,5 @@
 <submit-button>
-  <a href={opts.to} class={ btnType() }>
+  <a href={opts.to} class={ btnType() + ' ' + opts.tamanio}>
     <span class={ btnIcon() }></span>
     { btnLabel() }
   </a>

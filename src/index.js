@@ -37,6 +37,7 @@ import './components/common/form/pagination-bar.tag'
 import './components/common/form/actions.tag'
 import './components/common/form/action-group.tag'
 import './components/common/form/action-button.tag'
+import './components/common/form/ventana-modal.tag'
 
 // Patrones Funcionales
 import './components/patterns/crud/searchpanel.tag'
