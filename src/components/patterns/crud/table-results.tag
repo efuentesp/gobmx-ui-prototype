@@ -45,8 +45,9 @@
        </tr>
        </tbody>
     </table>
-    <pagination-bar if={opts.pagination=="true"} label="Total de registros encontrados: {this.rows.length}" previous="Anterior" next="Siguiente"/>
 
+    <pagination-bar if={opts.pagination=="true"} label="Total de registros encontrados: {this.rows.length}" previous="Anterior" next="Siguiente"/>
+    <div if={opts.pagination=="false"} class="separador25px" />
 
     <style>
       .botonTabla {
@@ -58,11 +59,15 @@
       .estiloTabla{
         margin-bottom: 0px;
       }
+      .separador25px {
+        height: 25px;
+      }
     </style>
 
      <script>
       this.headers    = JSON.parse(localStorage.getItem('header_'+ this.opts.id));
       this.rows       = JSON.parse(localStorage.getItem('rows_'+ this.opts.id));
+      console.log(this.rows);
       for (var i=0; i < this.rows.length; i++)
       {
         for (var j=0; j < this.rows[i].data.length; j++){

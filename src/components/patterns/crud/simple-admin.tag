@@ -6,7 +6,7 @@
              <inputbox placeholder={header.label} id={this.opts.id+index}> </inputbox>
            </th>
            <th style="text-align: center; vertical-align:middle;" >
-              <submit-button to="/cliente-admin/" action="create" onclick={addRow} tamanio="btn-xs"></submit-button>
+              <submit-button to="/cliente-admin/" action="addBlue" onclick={addRow} tamanio="btn-sm"></submit-button>
            </th>
          </tr>
          <tr>
@@ -20,7 +20,7 @@
              {d}
            </td>
            <td style="text-align: center; vertical-align:middle;">
-               <submit-button to="/cliente-admin/" action="delete" onclick={removeRow} tamanio="btn-xs"></submit-button>
+               <submit-button to="/cliente-admin/" action="deleteRojo" onclick={removeRow} tamanio="btn-sm"></submit-button>
            </td>
        </tr>
        </tbody>

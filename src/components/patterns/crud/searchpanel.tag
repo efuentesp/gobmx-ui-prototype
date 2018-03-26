@@ -12,7 +12,7 @@
         </row>
     </formbox>
   </panel>
-  <panel label="Resultados de búsqueda">
+  <panel label="Resultados de búsqued">
     <div if={this.parent.parent.opts.add} >
       <submit-button to={ this.parent.parent.opts.add } action="add" tamanio="btn-sm"></submit-button>
     </div>

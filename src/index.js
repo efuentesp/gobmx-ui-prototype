@@ -53,29 +53,39 @@ import './components/patterns/wizard/form-wizard.tag'
 import './components/patterns/wizard/step-wizard.tag'
 
 // Menú: Afiliados
-import './components/app/examples/crud/afiliados/afiliado-admin.tag'
-import './components/app/examples/crud/afiliados/afiliado-agregar.tag'
+// import './components/app/examples/crud/afiliados/afiliado-admin.tag'
+// import './components/app/examples/crud/afiliados/afiliado-agregar.tag'
 
 // Menú: Pensiones
-import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension.tag'
-import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso01.tag'
-import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso02.tag'
-import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso03.tag'
-import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso04.tag'
-import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso05.tag'
-import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso06.tag'
-import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso07.tag'
-import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso08.tag'
-import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso09.tag'
-import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso10.tag'
-import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-fin.tag'
+// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension.tag'
+// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso01.tag'
+// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso02.tag'
+// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso03.tag'
+// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso04.tag'
+// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso05.tag'
+// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso06.tag'
+// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso07.tag'
+// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso08.tag'
+// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso09.tag'
+// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso10.tag'
+// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-fin.tag'
 
 // Menú: Clientes
-import './components/app/otros/clienteAdministrar.tag'
-import './components/app/otros/clienteAgregar.tag'
-import './components/app/otros/clienteEditar.tag'
-import './components/app/otros/clienteEliminar.tag'
-import './components/app/otros/clienteWizard.tag'
+// import './components/app/otros/clienteAdministrar.tag'
+// import './components/app/otros/clienteAgregar.tag'
+// import './components/app/otros/clienteEditar.tag'
+// import './components/app/otros/clienteEliminar.tag'
+// import './components/app/otros/clienteWizard.tag'
+
+// Componentes Generados
+import './components/app/cliente/cliente-admin.tag'
+import './components/app/cliente/cliente-add.tag'
+import './components/app/cliente/cliente-edit.tag'
+import './components/app/cliente/cliente-delete.tag'
+import './components/app/pedido/pedido-admin.tag'
+import './components/app/pedido/pedido-add.tag'
+import './components/app/pedido/pedido-edit.tag'
+import './components/app/pedido/pedido-delete.tag'
 
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
@@ -109,13 +119,21 @@ for (var j = 0; j < json.files.length; j++) {
 require('riot-routehandler')
 var routes = [
   { route: '/home/', tag: 'app' },
-  { route: '/afiliado-admin/', tag: 'afiliado-admin' },
-  { route: '/afiliado-agregar/', tag: 'afiliado-agregar' },
-  { route: '/registrar-pension/', tag: 'registrar-pension' },
-  { route: '/cliente-admin/', tag: 'clienteadministrar' },
-  { route: '/cliente-editar/', tag: 'clienteeditar' },
-  { route: '/cliente-agregar/', tag: 'clienteagregar' },
-  { route: '/cliente-eliminar/', tag: 'clienteeliminar' },
-  { route: '/cliente-wizard/', tag: 'clientewizard' }
+  // { route: '/afiliado-admin/', tag: 'afiliado-admin' },
+  // { route: '/afiliado-agregar/', tag: 'afiliado-agregar' },
+  // { route: '/registrar-pension/', tag: 'registrar-pension' },
+  // { route: '/cliente-admin/', tag: 'clienteadministrar' },
+  // { route: '/cliente-editar/', tag: 'clienteeditar' },
+  // { route: '/cliente-agregar/', tag: 'clienteagregar' },
+  // { route: '/cliente-eliminar/', tag: 'clienteeliminar' },
+  // { route: '/cliente-wizard/', tag: 'clientewizard' },
+  { route: '/cliente-admin/', tag: 'cliente-admin' },
+  { route: '/pedido-admin/', tag: 'pedido-admin' },
+  { route: '/cliente-add/', tag: 'cliente-add' },
+  { route: '/pedido-add/', tag: 'pedido-add' },
+  { route: '/cliente-edit/', tag: 'cliente-edit' },
+  { route: '/pedido-edit/', tag: 'pedido-edit' },
+  { route: '/cliente-delete/', tag: 'cliente-delete' },
+  { route: '/pedido-delete/', tag: 'pedido-delete' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login', username: 'Usuario', password: 'Contraseña', link: '//' } } })

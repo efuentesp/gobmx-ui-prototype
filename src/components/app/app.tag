@@ -36,7 +36,11 @@
     <top-menu label="Clientes">
       <menu-item label="Administrar" to="/cliente-admin/" />
       <menu-item label="Wizard" to="/cliente-wizard/" />
-	  <menu-item label="Agregar" to="/cliente-agregar/" />
+	    <menu-item label="Agregar" to="/cliente-agregar/" />
+    </top-menu>
+    <top-menu label="Auto">
+      <menu-item to="/cliente-admin/" label="Clientes" />
+      <menu-item to="/pedido-admin/" label="Pedidos" />
     </top-menu>
   </topbar>
 </app>
