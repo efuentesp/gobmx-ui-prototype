@@ -40,6 +40,7 @@ import './components/common/form/action-button.tag'
 import './components/common/form/ventana-modal.tag'
 import './components/common/form/select-list.tag'
 import './components/common/form/tablist.tag'
+import './components/common/form/option-matrix.tag'
 
 // Patrones Funcionales
 import './components/patterns/crud/searchpanel.tag'
