@@ -13,6 +13,7 @@
 	<script>
 
 		function setDatePicker(){
+			alert('Mensaje JPB');
 			var dpId = "#" +  opts.id;
 			var dpDateFormat = "";
 			if ( opts.format ) {
@@ -62,4 +63,3 @@
 		}
 	</style>
 </date-picker>
-

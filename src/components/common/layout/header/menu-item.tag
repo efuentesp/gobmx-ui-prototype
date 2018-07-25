@@ -1,6 +1,5 @@
 <menu-item>
-  <li><a href={opts.to}>{opts.label}</a></li>
-
+  <li><a href={opts.to} onclick={rvs}>{opts.label}</a></li>
 
   <style>
     menu-item > li > a {
@@ -31,4 +30,13 @@
       color: #000000;
     }
   </style>
+
+  <script type="text/javascript">
+    this.rvs = function resetVerticalScroll() {
+      $('html, body').animate({
+          scrollTop: $("#pnlMain").offset().top
+      }, 20);
+    }
+  </script>
+
 </menu-item>
