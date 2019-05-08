@@ -1,19 +1,18 @@
 <date-picker>
-	<label for="calendar" if={ opts.required == 'true'}   for={opts.type}>{ opts.label}<font color="red"> *</font></label>
-	<label for="calendar" if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.label }</label>
-	<fieldset>
-		<div class="form-group datepicker-group" id={ opts.id } >
-			<input type="text" placeholder={opts.placeholder} id={ "i-date-" + opts.id } />
-			<span class="glyphicon glyphicon-calendar" aria-hidden="true">
-				<span></span>
+	<label if={ opts.required == 'true'}   for={opts.type}>{ opts.label}<font color="red"> *</font></label>
+	<label if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.label }</label>
+	<fieldset>		
+		<div id={ opts.id } class="input-group">
+			<span class="input-group-addon">
+				<i class="glyphicon glyphicon-calendar"></i>
 			</span>
+			<input type="text" id={ "i-date-" + opts.id } placeholder={opts.placeholder} class="form-control" name="form-inputbox">
 		</div>
 	</fieldset>
 
 	<script>
 
 		function setDatePicker(){
-			alert('Mensaje JPB');
 			var dpId = "#" +  opts.id;
 			var dpDateFormat = "";
 			if ( opts.format ) {

@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "build": "webpack --config webpack-prod.config.js --colors",
-    "dev": "webpack-dev-server --config webpack-dev.config.js --watch --colors"
+    "dev": "npm run format-json && webpack-dev-server --config webpack-dev.config.js --watch --colors",
+    "casper": "casperjs test casperjstestsample.js",
+    "format-json": "prettier-eslint --write \"src/tabledata/*.json\""
   },
   "repository": {
     "type": "git",
@@ -30,7 +32,8 @@
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.17.0",
     "json-loader": "^0.5.4",
-    "node-sass": "^3.7.0",
+    "node-sass": "^4.9.4",
+    "prettier-eslint-cli": "^4.7.1",
     "riotjs-loader": "^4.0.0",
     "sass-loader": "^3.2.0",
     "sass-mq": "^3.3.1",
