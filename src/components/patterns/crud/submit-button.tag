@@ -84,8 +84,27 @@
 		    case 'search':
           return buttons[6].button.class;
           break;
-		    case 'custom':
-          return buttons[7].button.class;
+		case 'custom':
+		  var cls = "btn";
+		  switch (opts.type) {
+			case 'link':
+			  cls = cls + " btn-link";
+			  break;
+		  }
+		  switch (opts.state) {
+			case 'default':
+			  cls = cls + " btn-default";
+			  break;
+			case 'primary':
+			  cls = cls + " btn-primary";
+			  break;
+			case 'danger':
+			  cls = cls + " btn-danger";
+			  break;
+			default:
+			  cls = cls + " btn-default";
+		  }
+		  return cls;
           break;
         case 'addBlue':
           return buttons[8].button.class;
