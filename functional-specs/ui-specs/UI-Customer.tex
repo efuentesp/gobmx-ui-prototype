@@ -1,0 +1,525 @@
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: Customer
+%% --------------------------------------------------------------------------------------------------
+%%\clearpage
+\section{Administrar Customer} \label{sec:cf-ui-admin-customer}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar Customer} \label{sec:ui-page-search-customer}
+
+\textbf{Descripci\'on}: P\'agina para Buscar Customer.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-customer-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Customer-Screenshots.js/Customer-Admin.png}
+	\caption{P\'agina Buscar Customer}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Criterios de B\'usqueda}
+	\label{tab:ui-search-criteria-customer-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Lista: Resultados de B\'usqueda}
+	\label{tab:ui-search-results-customer-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Agregar Customer} \label{sec:ui-page-create-customer}
+
+\textbf{Descripci\'on}: P\'agina para Agregar Customer.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-customer-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Customer-Screenshots.js/Customer-Add.png}
+	\caption{P\'agina Agregar Customer}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Agregar Customer}
+	\label{tab:ui-create-customer-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Type &
+		Modal &
+		Entity &
+		 &
+		Customer.Type \\
+		EmailAddress &
+		TextBox &
+		Email &
+		 &
+		Customer.EmailAddress \\
+		FullName &
+		TextBox &
+		Text &
+		 &
+		Customer.FullName \\
+		PhoneNumber &
+		TextBox &
+		Text &
+		 &
+		Customer.PhoneNumber \\
+		Address1 &
+		TextBox &
+		Text &
+		 &
+		Customer.Address1 \\
+		Address2 &
+		TextBox &
+		Text &
+		\begin{minipage}[t]{0.2\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Required: false
+		\end{itemize}
+		\end{minipage}
+		 &
+		Customer.Address2 \\
+		City &
+		TextBox &
+		Text &
+		 &
+		Customer.City \\
+		State &
+		TextBox &
+		Text &
+		 &
+		Customer.State \\
+		PostalCode &
+		TextBox &
+		Text &
+		 &
+		Customer.PostalCode \\
+		Country &
+		TextBox &
+		Text &
+		 &
+		Customer.Country \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar Customer} \label{sec:ui-page-update-customer}
+
+\textbf{Descripci\'on}: P\'agina para Editar Customer.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-customer-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Customer-Screenshots.js/Customer-Edit.png}
+	\caption{P\'agina Editar Customer}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Editar Customer}
+	\label{tab:ui-update-customer-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Type &
+		Modal &
+		Entity &
+		 &
+		Customer.Type \\
+		EmailAddress &
+		TextBox &
+		Email &
+		 &
+		Customer.EmailAddress \\
+		FullName &
+		TextBox &
+		Text &
+		 &
+		Customer.FullName \\
+		PhoneNumber &
+		TextBox &
+		Text &
+		 &
+		Customer.PhoneNumber \\
+		Address1 &
+		TextBox &
+		Text &
+		 &
+		Customer.Address1 \\
+		Address2 &
+		TextBox &
+		Text &
+		\begin{minipage}[t]{0.2\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Required: false
+		\end{itemize}
+		\end{minipage}
+		 &
+		Customer.Address2 \\
+		City &
+		TextBox &
+		Text &
+		 &
+		Customer.City \\
+		State &
+		TextBox &
+		Text &
+		 &
+		Customer.State \\
+		PostalCode &
+		TextBox &
+		Text &
+		 &
+		Customer.PostalCode \\
+		Country &
+		TextBox &
+		Text &
+		 &
+		Customer.Country \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar Customer} \label{sec:ui-page-delete-customer}
+
+\textbf{Descripci\'on}: P\'agina para Eliminar Customer.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-customer-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Customer-Screenshots.js/Customer-Delete.png}
+	\caption{P\'agina Eliminar Customer}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Eliminar Customer}
+	\label{tab:ui-delete-customer-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Type &
+		Label &
+		Entity &
+		&
+		Customer.Type \\
+		EmailAddress &
+		Label &
+		Email &
+		&
+		Customer.EmailAddress \\
+		FullName &
+		Label &
+		Text &
+		&
+		Customer.FullName \\
+		PhoneNumber &
+		Label &
+		Text &
+		&
+		Customer.PhoneNumber \\
+		Address1 &
+		Label &
+		Text &
+		&
+		Customer.Address1 \\
+		Address2 &
+		Label &
+		Text &
+		&
+		Customer.Address2 \\
+		City &
+		Label &
+		Text &
+		&
+		Customer.City \\
+		State &
+		Label &
+		Text &
+		&
+		Customer.State \\
+		PostalCode &
+		Label &
+		Text &
+		&
+		Customer.PostalCode \\
+		Country &
+		Label &
+		Text &
+		&
+		Customer.Country \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: CreditCard
+%% --------------------------------------------------------------------------------------------------
+%%\clearpage
+\section{Administrar CreditCard} \label{sec:cf-ui-admin-creditcard}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar CreditCard} \label{sec:ui-page-search-creditcard}
+
+\textbf{Descripci\'on}: P\'agina para Buscar CreditCard.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-creditcard-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Customer-Screenshots.js/CreditCard-Admin.png}
+	\caption{P\'agina Buscar CreditCard}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Criterios de B\'usqueda}
+	\label{tab:ui-search-criteria-creditcard-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Lista: Resultados de B\'usqueda}
+	\label{tab:ui-search-results-creditcard-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Agregar CreditCard} \label{sec:ui-page-create-creditcard}
+
+\textbf{Descripci\'on}: P\'agina para Agregar CreditCard.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-creditcard-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Customer-Screenshots.js/CreditCard-Add.png}
+	\caption{P\'agina Agregar CreditCard}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Agregar CreditCard}
+	\label{tab:ui-create-creditcard-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Customer &
+		Modal &
+		Entity &
+		 &
+		CreditCard.Customer \\
+		CardName &
+		TextBox &
+		Text &
+		 &
+		CreditCard.CardName \\
+		CardNumber &
+		TextBox &
+		Text &
+		 &
+		CreditCard.CardNumber \\
+		ExpirationDate &
+		DatePicker &
+		Date &
+		 &
+		CreditCard.ExpirationDate \\
+		CVV &
+		TextBox &
+		Text &
+		 &
+		CreditCard.CVV \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar CreditCard} \label{sec:ui-page-update-creditcard}
+
+\textbf{Descripci\'on}: P\'agina para Editar CreditCard.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-creditcard-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Customer-Screenshots.js/CreditCard-Edit.png}
+	\caption{P\'agina Editar CreditCard}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Editar CreditCard}
+	\label{tab:ui-update-creditcard-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Customer &
+		Modal &
+		Entity &
+		 &
+		CreditCard.Customer \\
+		CardName &
+		TextBox &
+		Text &
+		 &
+		CreditCard.CardName \\
+		CardNumber &
+		TextBox &
+		Text &
+		 &
+		CreditCard.CardNumber \\
+		ExpirationDate &
+		DatePicker &
+		Date &
+		 &
+		CreditCard.ExpirationDate \\
+		CVV &
+		TextBox &
+		Text &
+		 &
+		CreditCard.CVV \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar CreditCard} \label{sec:ui-page-delete-creditcard}
+
+\textbf{Descripci\'on}: P\'agina para Eliminar CreditCard.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-creditcard-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Customer-Screenshots.js/CreditCard-Delete.png}
+	\caption{P\'agina Eliminar CreditCard}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Eliminar CreditCard}
+	\label{tab:ui-delete-creditcard-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Customer &
+		Label &
+		Entity &
+		&
+		CreditCard.Customer \\
+		CardName &
+		Label &
+		Text &
+		&
+		CreditCard.CardName \\
+		CardNumber &
+		Label &
+		Text &
+		&
+		CreditCard.CardNumber \\
+		ExpirationDate &
+		Label &
+		Date &
+		&
+		CreditCard.ExpirationDate \\
+		CVV &
+		Label &
+		Text &
+		&
+		CreditCard.CVV \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+

@@ -1,0 +1,132 @@
+%% --------------------------------------------------------------------------------------------------
+%% M\'odulo: ShoppingCart
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Modelo de Dominio} \label{sec:dom-shoppingcart}
+\begin{figure}[H]
+\begin{center}
+	\label{tab:uml-domain-model}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{domain-model/DOM-ShoppingCart/domain-model.png}
+	\caption{Diagrama del Modelo de Dominio}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+		\begin{center}
+			\label{tab:uml-domain-model}
+			\includegraphics[width=0.95\textwidth,height=0.70\textheight]{domain-model/DOM-ShoppingCart/domain-model-enum.png}
+			\caption{Diagrama del Modelo de Dominio Enums}
+		\end{center}
+\end{figure}
+\begin{table}[H]
+			\caption{Campos Calculados con Regla de Negocio}
+			\label{tab:entities}
+			%\resizebox{\textwidth}{!}{
+			\begin{center}
+			\begin{tabularx}{0.90\linewidth}{ X X X X}
+				\hline
+				\textbf{Entidad} & \textbf{Campo} & \textbf{C\'odigo} & \textbf{Descripci\'on} \\
+				\hline
+ShoppingCart &SubTotal &BR03&SUM(ProductsOnCart.Total) \\
+ShoppingCart &TaxAmount &BR04&??? \\
+ShoppingCart &DiscountAmount &BR05&??? \\
+ShoppingCart &TotalAmount &BR05&SubTotal + TaxAmount - DiscountAmount \\
+ProductOnCart &Price &BR01&Se obtiene Product.Price \\
+ProductOnCart &Total &BR02&Product.Price * Quantity \\
+				\hline
+			\end{tabularx}
+			\end{center}
+			%}
+\end{table}
+
+\clearpage
+\section{Descripci\'on de las Entidades de Negocio} \label{sec:dom-entities-shoppingcart}
+
+\begin{table}[H]
+	\caption{Entidades del Modelo de Dominio}
+	\label{tab:entities}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabularx}{0.90\linewidth}{ X X }
+		\hline
+		\textbf{Entidad} & \textbf{Descripci\'on} \\
+		\hline
+		ShoppingCart (\ref{tab:fields-dom-ShoppingCart}) & ShoppingCart \\
+		ProductOnCart (\ref{tab:fields-dom-ProductOnCart}) & ProductOnCart \\
+		\hline
+	\end{tabularx}
+	\end{center}
+	%}
+\end{table}
+\section{Campos por Entidad de Negocio} \label{sec:entity-fields-shoppingcart}
+
+\begin{table}[H]
+	\caption{Entidad de Negocio ShoppingCart}
+	\label{tab:fields-dom-ShoppingCart}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabularx}{0.90\linewidth}{ X X X X X }
+		\hline
+		\textbf{Campo} &
+		\textbf{Etiqueta} &
+		\textbf{Tipo} &
+		\textbf{Restricciones} &
+		\textbf{Descripci\'on} \\
+		\hline
+		SubTotal &
+		SubTotal &
+		Currency &
+		 &
+		SubTotal \\
+		TaxAmount &
+		TaxAmount &
+		Currency &
+		 &
+		TaxAmount \\
+		DiscountAmount &
+		DiscountAmount &
+		Currency &
+		 &
+		DiscountAmount \\
+		TotalAmount &
+		TotalAmount &
+		Currency &
+		 &
+		TotalAmount \\
+		\hline
+	\end{tabularx}
+	\end{center}
+	%}
+\end{table}
+\begin{table}[H]
+	\caption{Entidad de Negocio ProductOnCart}
+	\label{tab:fields-dom-ProductOnCart}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabularx}{0.90\linewidth}{ X X X X X }
+		\hline
+		\textbf{Campo} &
+		\textbf{Etiqueta} &
+		\textbf{Tipo} &
+		\textbf{Restricciones} &
+		\textbf{Descripci\'on} \\
+		\hline
+		Price &
+		Price &
+		Currency &
+		 &
+		Price \\
+		Quantity &
+		Quantity &
+		Integer &
+		 &
+		Quantity \\
+		Total &
+		Total &
+		Currency &
+		 &
+		Total \\
+		\hline
+	\end{tabularx}
+	\end{center}
+	%}
+\end{table}

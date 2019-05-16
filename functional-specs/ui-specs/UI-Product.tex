@@ -1,0 +1,426 @@
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: Category
+%% --------------------------------------------------------------------------------------------------
+%%\clearpage
+\section{Administrar Category} \label{sec:cf-ui-admin-category}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar Category} \label{sec:ui-page-search-category}
+
+\textbf{Descripci\'on}: P\'agina para Buscar Category.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-category-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Product-Screenshots.js/Category-Admin.png}
+	\caption{P\'agina Buscar Category}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Criterios de B\'usqueda}
+	\label{tab:ui-search-criteria-category-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Name &
+		TextBox &
+		Text &
+		Category.Name \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Lista: Resultados de B\'usqueda}
+	\label{tab:ui-search-results-category-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Name &
+		Category.Name \\
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Agregar Category} \label{sec:ui-page-create-category}
+
+\textbf{Descripci\'on}: P\'agina para Agregar Category.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-category-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Product-Screenshots.js/Category-Add.png}
+	\caption{P\'agina Agregar Category}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Agregar Category}
+	\label{tab:ui-create-category-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Picture &
+		FileSelection &
+		Image &
+		 &
+		Category.Picture \\
+		Name &
+		TextBox &
+		Text &
+		 &
+		Category.Name \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar Category} \label{sec:ui-page-update-category}
+
+\textbf{Descripci\'on}: P\'agina para Editar Category.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-category-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Product-Screenshots.js/Category-Edit.png}
+	\caption{P\'agina Editar Category}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Editar Category}
+	\label{tab:ui-update-category-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Picture &
+		FileSelection &
+		Image &
+		 &
+		Category.Picture \\
+		Name &
+		TextBox &
+		Text &
+		 &
+		Category.Name \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar Category} \label{sec:ui-page-delete-category}
+
+\textbf{Descripci\'on}: P\'agina para Eliminar Category.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-category-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Product-Screenshots.js/Category-Delete.png}
+	\caption{P\'agina Eliminar Category}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Eliminar Category}
+	\label{tab:ui-delete-category-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Picture &
+		Label &
+		Image &
+		&
+		Category.Picture \\
+		Name &
+		Label &
+		Text &
+		&
+		Category.Name \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: Product
+%% --------------------------------------------------------------------------------------------------
+%%\clearpage
+\section{Administrar Product} \label{sec:cf-ui-admin-product}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar Product} \label{sec:ui-page-search-product}
+
+\textbf{Descripci\'on}: P\'agina para Buscar Product.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-product-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Product-Screenshots.js/Product-Admin.png}
+	\caption{P\'agina Buscar Product}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Criterios de B\'usqueda}
+	\label{tab:ui-search-criteria-product-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Sku &
+		TextBox &
+		Text &
+		Product.Sku \\
+		Name &
+		TextBox &
+		Text &
+		Product.Name \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Lista: Resultados de B\'usqueda}
+	\label{tab:ui-search-results-product-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Sku &
+		Product.Sku \\
+		Name &
+		Product.Name \\
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Agregar Product} \label{sec:ui-page-create-product}
+
+\textbf{Descripci\'on}: P\'agina para Agregar Product.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-product-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Product-Screenshots.js/Product-Add.png}
+	\caption{P\'agina Agregar Product}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Agregar Product}
+	\label{tab:ui-create-product-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Category &
+		Modal &
+		Entity &
+		 &
+		Product.Category \\
+		Picture &
+		FileSelection &
+		Image &
+		 &
+		Product.Picture \\
+		Sku &
+		TextBox &
+		Text &
+		 &
+		Product.Sku \\
+		Name &
+		TextBox &
+		Text &
+		 &
+		Product.Name \\
+		Description &
+		TextArea &
+		Long Text &
+		 &
+		Product.Description \\
+		Price &
+		TextBox &
+		Currency &
+		 &
+		Product.Price \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar Product} \label{sec:ui-page-update-product}
+
+\textbf{Descripci\'on}: P\'agina para Editar Product.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-product-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Product-Screenshots.js/Product-Edit.png}
+	\caption{P\'agina Editar Product}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Editar Product}
+	\label{tab:ui-update-product-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Category &
+		Modal &
+		Entity &
+		 &
+		Product.Category \\
+		Picture &
+		FileSelection &
+		Image &
+		 &
+		Product.Picture \\
+		Sku &
+		TextBox &
+		Text &
+		 &
+		Product.Sku \\
+		Name &
+		TextBox &
+		Text &
+		 &
+		Product.Name \\
+		Description &
+		TextArea &
+		Long Text &
+		 &
+		Product.Description \\
+		Price &
+		TextBox &
+		Currency &
+		 &
+		Product.Price \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar Product} \label{sec:ui-page-delete-product}
+
+\textbf{Descripci\'on}: P\'agina para Eliminar Product.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-product-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/Product-Screenshots.js/Product-Delete.png}
+	\caption{P\'agina Eliminar Product}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Eliminar Product}
+	\label{tab:ui-delete-product-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Category &
+		Label &
+		Entity &
+		&
+		Product.Category \\
+		Picture &
+		Label &
+		Image &
+		&
+		Product.Picture \\
+		Sku &
+		Label &
+		Text &
+		&
+		Product.Sku \\
+		Name &
+		Label &
+		Text &
+		&
+		Product.Name \\
+		Description &
+		Label &
+		Long Text &
+		&
+		Product.Description \\
+		Price &
+		Label &
+		Currency &
+		&
+		Product.Price \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+

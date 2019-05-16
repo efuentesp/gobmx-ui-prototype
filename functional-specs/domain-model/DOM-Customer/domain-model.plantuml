@@ -1,0 +1,23 @@
+@startuml
+title Customer
+entity Customer <<entity>> {
+	Type : Type
+	EmailAddress : Email
+	FullName : Text
+	PhoneNumber : Text
+	Address1 : Text
+	Address2 : Text
+	City : Text
+	State : Text
+	PostalCode : Text
+	Country : Text
+}
+entity CreditCard <<entity>> {
+	CardName : Text
+	CardNumber : Text
+	ExpirationDate : Date
+	CVV : Text
+}
+
+	CreditCard "0..*" --> "1..1 Customer" Customer
+@enduml

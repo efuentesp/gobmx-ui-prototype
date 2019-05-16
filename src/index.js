@@ -1,3 +1,4 @@
+/* eslint no-mixed-spaces-and-tabs: ["error", "smart-tabs"] */
 'use strict'
 
 if (module.hot) {
@@ -15,11 +16,15 @@ import './components/app/app.tag'
 // Componentes comunes
 import './components/common/layout/page.tag'
 import './components/common/layout/content.tag'
+import './components/common/layout/tablist.tag'
+import './components/common/layout/footer/footerbar.tag'
 import './components/common/layout/header/topbar.tag'
-import './components/common/layout/header/top-menu.tag'
-import './components/common/layout/header/menu-item.tag'
-import './components/common/grid/row.tag'
-import './components/common/grid/column.tag'
+import './components/common/layout/sidebar/menu-item.tag'
+import './components/common/layout/sidebar/menu-section.tag'
+import './components/common/layout/sidebar/side-menu.tag'
+import './components/common/layout/sidebar/sidebar-menu.tag'
+import './components/common/layout/sidebar/sidebar-profile.tag'
+import './components/common/layout/sidebar/sidebar.tag'
 import './components/common/form/formbox.tag'
 import './components/common/form/date-picker.tag'
 import './components/common/form/select-auto.tag'
@@ -37,10 +42,8 @@ import './components/common/form/pagination-bar.tag'
 import './components/common/form/actions.tag'
 import './components/common/form/action-group.tag'
 import './components/common/form/action-button.tag'
-import './components/common/form/ventana-modal.tag'
-import './components/common/form/select-list.tag'
-import './components/common/form/tablist.tag'
-import './components/common/form/option-matrix.tag'
+import './components/common/grid/row.tag'
+import './components/common/grid/column.tag'
 
 // Patrones Funcionales
 import './components/patterns/crud/searchpanel.tag'
@@ -49,44 +52,48 @@ import './components/patterns/crud/delete-button.tag'
 import './components/patterns/crud/submit-button.tag'
 import './components/patterns/crud/table-results.tag'
 import './components/patterns/crud/simple-admin.tag'
+import './components/patterns/crud/select-list.tag'
 import './components/patterns/crud/modal-box.tag'
 import './components/patterns/wizard/form-wizard.tag'
 import './components/patterns/wizard/step-wizard.tag'
 
-// Menú: Afiliados
-// import './components/app/examples/crud/afiliados/afiliado-admin.tag'
-// import './components/app/examples/crud/afiliados/afiliado-agregar.tag'
-
-// Menú: Pensiones
-// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension.tag'
-// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso01.tag'
-// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso02.tag'
-// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso03.tag'
-// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso04.tag'
-// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso05.tag'
-// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso06.tag'
-// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso07.tag'
-// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso08.tag'
-// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso09.tag'
-// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso10.tag'
-// import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-fin.tag'
-
-// Menú: Clientes
-// import './components/app/otros/clienteAdministrar.tag'
-// import './components/app/otros/clienteAgregar.tag'
-// import './components/app/otros/clienteEditar.tag'
-// import './components/app/otros/clienteEliminar.tag'
-// import './components/app/otros/clienteWizard.tag'
-
-// Componentes Generados
-import './components/app/cliente/cliente-admin.tag'
-import './components/app/cliente/cliente-add.tag'
-import './components/app/cliente/cliente-edit.tag'
-import './components/app/cliente/cliente-delete.tag'
-import './components/app/pedido/pedido-admin.tag'
-import './components/app/pedido/pedido-add.tag'
-import './components/app/pedido/pedido-edit.tag'
-import './components/app/pedido/pedido-delete.tag'
+// Componentes generados
+import './components/app/product/productcategoriesscreen.tag'
+import './components/app/product/productlistscreen.tag'
+import './components/app/product/productscreen.tag'
+import './components/app/product/category/category-admin.tag'
+import './components/app/product/category/category-form.tag'
+import './components/app/product/category/category-add.tag'
+import './components/app/product/category/category-edit.tag'
+import './components/app/product/category/category-delete.tag'
+import './components/app/product/product/product-admin.tag'
+import './components/app/product/product/product-form.tag'
+import './components/app/product/product/product-add.tag'
+import './components/app/product/product/product-edit.tag'
+import './components/app/product/product/product-delete.tag'
+import './components/app/customer/customer/customer-admin.tag'
+import './components/app/customer/customer/customer-form.tag'
+import './components/app/customer/customer/customer-add.tag'
+import './components/app/customer/customer/customer-edit.tag'
+import './components/app/customer/customer/customer-delete.tag'
+import './components/app/customer/creditcard/creditcard-admin.tag'
+import './components/app/customer/creditcard/creditcard-form.tag'
+import './components/app/customer/creditcard/creditcard-add.tag'
+import './components/app/customer/creditcard/creditcard-edit.tag'
+import './components/app/customer/creditcard/creditcard-delete.tag'
+import './components/app/shoppingcart/shoppingcartscreen.tag'
+import './components/app/shoppingcart/checkoutscreen.tag'
+import './components/app/shoppingcart/paymentconfirmationscreen.tag'
+import './components/app/shoppingcart/shoppingcart/shoppingcart-admin.tag'
+import './components/app/shoppingcart/shoppingcart/shoppingcart-form.tag'
+import './components/app/shoppingcart/shoppingcart/shoppingcart-add.tag'
+import './components/app/shoppingcart/shoppingcart/shoppingcart-edit.tag'
+import './components/app/shoppingcart/shoppingcart/shoppingcart-delete.tag'
+import './components/app/shoppingcart/productoncart/productoncart-admin.tag'
+import './components/app/shoppingcart/productoncart/productoncart-form.tag'
+import './components/app/shoppingcart/productoncart/productoncart-add.tag'
+import './components/app/shoppingcart/productoncart/productoncart-edit.tag'
+import './components/app/shoppingcart/productoncart/productoncart-delete.tag'
 
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
@@ -119,22 +126,38 @@ for (var j = 0; j < json.files.length; j++) {
 
 require('riot-routehandler')
 var routes = [
+  { route: '/', tag: 'productcategoriesscreen' },
+  { route: '/login/', tag: 'login' },
   { route: '/home/', tag: 'app' },
-  // { route: '/afiliado-admin/', tag: 'afiliado-admin' },
-  // { route: '/afiliado-agregar/', tag: 'afiliado-agregar' },
-  // { route: '/registrar-pension/', tag: 'registrar-pension' },
-  // { route: '/cliente-admin/', tag: 'clienteadministrar' },
-  // { route: '/cliente-editar/', tag: 'clienteeditar' },
-  // { route: '/cliente-agregar/', tag: 'clienteagregar' },
-  // { route: '/cliente-eliminar/', tag: 'clienteeliminar' },
-  // { route: '/cliente-wizard/', tag: 'clientewizard' },
-  { route: '/cliente-admin/', tag: 'cliente-admin' },
-  { route: '/pedido-admin/', tag: 'pedido-admin' },
-  { route: '/cliente-add/', tag: 'cliente-add' },
-  { route: '/pedido-add/', tag: 'pedido-add' },
-  { route: '/cliente-edit/', tag: 'cliente-edit' },
-  { route: '/pedido-edit/', tag: 'pedido-edit' },
-  { route: '/cliente-delete/', tag: 'cliente-delete' },
-  { route: '/pedido-delete/', tag: 'pedido-delete' }
+  { route: '/product/productcategoriesscreen', tag: 'productcategoriesscreen' },
+  { route: '/product/productlistscreen', tag: 'productlistscreen' },
+  { route: '/product/productscreen', tag: 'productscreen' },
+  { route: '/product/category-admin/', tag: 'category-admin' },
+  { route: '/product/category-add/', tag: 'category-add' },
+  { route: '/product/category-edit/', tag: 'category-edit' },
+  { route: '/product/category-delete/', tag: 'category-delete' },
+  { route: '/product/product-admin/', tag: 'product-admin' },
+  { route: '/product/product-add/', tag: 'product-add' },
+  { route: '/product/product-edit/', tag: 'product-edit' },
+  { route: '/product/product-delete/', tag: 'product-delete' },
+  { route: '/customer/customer-admin/', tag: 'customer-admin' },
+  { route: '/customer/customer-add/', tag: 'customer-add' },
+  { route: '/customer/customer-edit/', tag: 'customer-edit' },
+  { route: '/customer/customer-delete/', tag: 'customer-delete' },
+  { route: '/customer/creditcard-admin/', tag: 'creditcard-admin' },
+  { route: '/customer/creditcard-add/', tag: 'creditcard-add' },
+  { route: '/customer/creditcard-edit/', tag: 'creditcard-edit' },
+  { route: '/customer/creditcard-delete/', tag: 'creditcard-delete' },
+  { route: '/shoppingcart/shoppingcartscreen', tag: 'shoppingcartscreen' },
+  { route: '/shoppingcart/checkoutscreen', tag: 'checkoutscreen' },
+  { route: '/shoppingcart/paymentconfirmationscreen', tag: 'paymentconfirmationscreen' },
+  { route: '/shoppingcart/shoppingcart-admin/', tag: 'shoppingcart-admin' },
+  { route: '/shoppingcart/shoppingcart-add/', tag: 'shoppingcart-add' },
+  { route: '/shoppingcart/shoppingcart-edit/', tag: 'shoppingcart-edit' },
+  { route: '/shoppingcart/shoppingcart-delete/', tag: 'shoppingcart-delete' },
+  { route: '/shoppingcart/productoncart-admin/', tag: 'productoncart-admin' },
+  { route: '/shoppingcart/productoncart-add/', tag: 'productoncart-add' },
+  { route: '/shoppingcart/productoncart-edit/', tag: 'productoncart-edit' },
+  { route: '/shoppingcart/productoncart-delete/', tag: 'productoncart-delete' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login', username: 'Usuario', password: 'Contraseña', link: '//' } } })

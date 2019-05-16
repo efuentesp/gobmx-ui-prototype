@@ -1,0 +1,19 @@
+@startumlstart
+start
+:El Operador selecciona el registro a modificar;
+:El Sistema obtiene y muestra el detalle en la página [Editar ShoppingCart];
+:El Operador modifica información en la forma [Editar ShoppingCart];
+while (Datos incompletos?) is (SI)  
+	:El Sistema muestra los campos de la forma\n [Editar ShoppingCart] que son obligatorios;  
+	:El Operador modifica información en la forma [Editar ShoppingCart];
+endwhile (NO)  
+
+	if (Datos válidos?) then (SI)    
+		:El Sistema modifica el registro\n en la entidad [ShoppingCart];  
+	else (NO)    
+		:El Sistema muestra los campos de la forma\n [Editar ShoppingCart] que son inválidos e indica la razón;    
+		end  
+	endif
+stop
+@enduml
+

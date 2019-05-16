@@ -1,0 +1,16 @@
+@startuml
+title Product
+entity Category <<entity>> {
+	Picture : Image
+	Name : Text
+}
+entity Product <<entity>> {
+	Picture : Image
+	Sku : Text
+	Name : Text
+	Description : LongText
+	Price : Currency
+}
+
+	Product "0..*" --> "1..1 Category" Category
+@enduml

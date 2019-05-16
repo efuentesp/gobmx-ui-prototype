@@ -1,0 +1,625 @@
+
+	%% --------------------------------------------------------------------------------------------------
+	%% CRUD Use Cases List: Product
+	%% --------------------------------------------------------------------------------------------------
+	%%\clearpage
+	\section{Lista de CU del m\'odulo Product} \label{sec:uc-product}
+
+	%%\clearpage
+	\begin{table}[H]
+		\caption{CU para el Mantenimiento de Category}
+		\label{uc-entity-category}
+		%\resizebox{\textwidth}{!}{
+		\begin{center}
+		\begin{tabularx}{0.90\linewidth}{ X X X }
+			\hline
+			\textbf{Nombre} & \textbf{Descripci\'on} & \textbf{Actores} \\
+			\hline
+			CUXX-01. Buscar Category & Buscar Category. & Operador \\
+			CUXX-02. Agregar Category & Agregar Category. & Operador \\
+			CUXX-03. Editar Category & Editar Category. & Operador \\
+			CUXX-04. Eliminar Category & Eliminar Category. & Operador \\
+			\hline
+		\end{tabularx}
+		\end{center}
+		%}
+	\end{table}
+	
+	\begin{figure}[H]
+		\begin{center}
+		\label{tab:ucd-entity-category}
+		\includegraphics[width=0.5\textwidth]{use-cases/diagrams/UCD-Product/Category.png}
+		\caption{Diagrama de Casos de Uso para Mantenimiento de Category}
+		\end{center}
+	\end{figure}
+	%%\clearpage
+	\begin{table}[H]
+		\caption{CU para el Mantenimiento de Product}
+		\label{uc-entity-product}
+		%\resizebox{\textwidth}{!}{
+		\begin{center}
+		\begin{tabularx}{0.90\linewidth}{ X X X }
+			\hline
+			\textbf{Nombre} & \textbf{Descripci\'on} & \textbf{Actores} \\
+			\hline
+			CUXX-01. Buscar Product & Buscar Product. & Operador \\
+			CUXX-02. Agregar Product & Agregar Product. & Operador \\
+			CUXX-03. Editar Product & Editar Product. & Operador \\
+			CUXX-04. Eliminar Product & Eliminar Product. & Operador \\
+			\hline
+		\end{tabularx}
+		\end{center}
+		%}
+	\end{table}
+	
+	\begin{figure}[H]
+		\begin{center}
+		\label{tab:ucd-entity-product}
+		\includegraphics[width=0.5\textwidth]{use-cases/diagrams/UCD-Product/Product.png}
+		\caption{Diagrama de Casos de Uso para Mantenimiento de Product}
+		\end{center}
+	\end{figure}
+	%% --------------------------------------------------------------------------------------------------
+	%% CRUD Use Cases: Category
+	%% --------------------------------------------------------------------------------------------------
+	\clearpage
+	\section{Administrar Category} \label{sec:cf-uc-admin-category}
+	
+	%% -----
+	%% Use Case: Search
+	%% -----
+	\subsection{CUXX-01. Buscar Category} \label{sec:cu-search-Category}
+	
+	\begin{tabular}{ p{3.5cm} p{11.5cm} }
+		\textbf{Actores} & Operador\\
+		\textbf{Objetivo} & Buscar Category.\\
+		\textbf{Evento Disparador} & El Operador solicita la p\'agina [Buscar Category (\ref{sec:ui-page-search-category})].\\
+		\textbf{Tipo} & Usuario\\
+		\textbf{Pre-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha registrado informaci\'on de [Category].
+			\end{itemize}
+			\end{minipage} \\
+		\textbf{Post-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha mostrado una lista de [Category] que cumplieron los criterios solicitados.
+			\end{itemize}
+			\end{minipage} \\
+		\\
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Escenario Principal} \\
+		\begin{enumerate}
+			\item El Sistema muestra la p\'agina [Buscar Category (\ref{sec:ui-page-search-category})].
+			\item El Operador captura informaci\'on en la forma [Criterios de B\'usqueda (\ref{tab:ui-search-criteria-category-form})].
+			\item El Operador elige el comando [Buscar].
+			\item El Sistema determina que los datos de la forma [Criterios de B\'usqueda (\ref{tab:ui-search-criteria-category-form})] est\'an completos.
+				\begin{enumerate}
+					\item Excepci\'on 01: Datos incompletos.
+				\end{enumerate}
+			\item El Sistema obtiene informaci\'on de acuerdo a los Criterios de B\'usqueda seleccionados.
+				\begin{enumerate}
+					\item Excepci\'on 02: No se encontr\'o informaci\'on.
+				\end{enumerate}
+			\item El Sistema muestra la lista [Resultados de B\'usqueda (\ref{tab:ui-search-results-category-form})].
+			\item Fin del Caso de Uso.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Excepci\'on 01. Datos incompletos} \\
+		\begin{enumerate}
+			\item El Sistema determina que los datos de la forma [Criterios de B\'usqueda (\ref{tab:ui-search-criteria-category-form})] est\'an incompletos.
+			\item El Sistema muestra los campos de la forma [Criterios de B\'usqueda (\ref{tab:ui-search-criteria-category-form})] que son obligatorios.
+			\item Fin de la Excepci\'on.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Excepci\'on 02. No se encontr\'o informaci\'on} \\
+		\begin{enumerate}
+			\item El Sistema no obtiene informaci\'on de acuerdo a los Criterios de B\'usqueda seleccionados.
+			\item El Sistema avisa que no encontr\'o informaci\'on [(\ref{tab:ui-nosearch-category-page})].
+			\item Fin de la Excepci\'on.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{figure}[H]
+		\begin{center}
+			\label{tab:activity-search-ucd-entity-category}
+			\includegraphics[width=0.5\textwidth]{use-cases/diagrams/SearchActivityUCD-Product/Category.png}
+			\caption{Diagrama de Actividades para Caso de Uso CUXX-01 Buscar Category}
+	\end{center}
+	\end{figure}
+	%% -----
+	%% Use Case: Create
+	%% -----
+	\clearpage
+	\subsection{CUXX-02. Agregar Category} \label{sec:cu-create-Category}
+	
+	\begin{tabular}{ p{3.5cm} p{11.5cm} }
+		\textbf{Actores} & Operador\\
+		\textbf{Objetivo} & Agregar Category.\\
+		\textbf{Evento Disparador} & El Operador solicita la p\'agina [Agregar Category (\ref{sec:ui-page-create-category})].\\
+		\textbf{Tipo} & Usuario\\
+		\textbf{Pre-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+			\end{itemize}
+			\end{minipage} \\
+		\textbf{Post-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha registrado informaci\'on de un [Category] nuevo.
+			\end{itemize}
+			\end{minipage} \\
+		\\
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Escenario Principal} \\
+		\begin{enumerate}
+			\item El Sistema muestra la p\'agina [Agregar Category (\ref{sec:ui-page-create-category})].
+			\item El Operador captura informaci\'on en la forma [Agregar Category (\ref{tab:ui-create-category-form})].
+			\item El Operador elige el comando [Agregar].
+			\item El Sistema determina que los datos de la forma [Agregar Category (\ref{tab:ui-create-category-form})] est\'an completos.
+				\begin{enumerate}
+					\item Excepci\'on 01: Datos incompletos.
+				\end{enumerate}
+			\item El Sistema determina que los datos de la forma [Agregar Category (\ref{tab:ui-create-category-form})] son v\'alidos.
+				\begin{enumerate}
+					\item Excepci\'on 02: Datos inv\'alidos.
+				\end{enumerate}
+			\item El Sistema crea un nuevo registro en la entidad [Category].
+			\item Fin del Caso de Uso.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Excepci\'on 01} \\
+		\begin{enumerate}
+			\item El Sistema determina que los datos de la forma [Agregar Category (\ref{tab:ui-create-category-form})] est\'an incompletos.
+			\item El Sistema muestra los campos de la forma [Agregar Category (\ref{tab:ui-create-category-form})] que son obligatorios.
+			\item Fin de la Excepci\'on.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Excepci\'on 02} \\
+		\begin{enumerate}
+			\item El Sistema determina que los datos de la forma [Agregar Category (\ref{tab:ui-create-category-form})] son inv\'alidos.
+			\item El Sistema muestra los campos de la forma [Agregar Category (\ref{tab:ui-create-category-form})] que son inv\'alidos e indica la raz\'on.
+			\item Fin de la Excepci\'on.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{figure}[H]
+		\begin{center}
+			\label{tab:activity-create-ucd-entity-category}
+			\includegraphics[width=0.5\textwidth]{use-cases/diagrams/CreateActivityUCD-Product/Category.png}
+			\caption{Diagrama de Actividades para Caso de Uso CUXX-02 Agregar Category}	
+	    \end{center}
+	\end{figure}
+			
+	
+	%% -----
+	%% Use Case: Update
+	%% -----
+	\clearpage
+	\subsection{CUXX-03. Editar Category} \label{sec:cu-update-Category}
+	
+	\begin{tabular}{ p{3.5cm} p{11.5cm} }
+		\textbf{Actores} & Operador\\
+		\textbf{Objetivo} & Editar Category.\\
+		\textbf{Evento Disparador} & El Operador solicita la p\'agina [Editar Category (\ref{sec:ui-page-update-category})].\\
+		\textbf{Tipo} & Usuario\\
+		\textbf{Pre-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha registrado informaci\'on de [Category].
+			\end{itemize}
+			\end{minipage} \\
+		\textbf{Post-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha actualizado la informaci\'on de [Category].
+			\end{itemize}
+			\end{minipage} \\
+		\\
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Escenario Principal} \\
+		\begin{enumerate}
+			\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Category (\ref{sec:cu-search-Category})].
+			\item El Operador selecciona el comando [Editar].
+			\item El Sistema muestra la p\'agina [Editar Category (\ref{sec:ui-page-update-category})].
+			\item El Operador modifica informaci\'on en la forma [Editar Category (\ref{tab:ui-update-category-form})].
+			\item El Operador elige el comando [Agregar].
+			\item El Sistema determina que los datos de la forma [Editar Category (\ref{tab:ui-update-category-form})] est\'an completos.
+				\begin{enumerate}
+					\item Excepci\'on 01: Datos incompletos.
+				\end{enumerate}
+			\item El Sistema determina que los datos de la forma [Editar Category (\ref{tab:ui-update-category-form})] son v\'alidos.
+				\begin{enumerate}
+					\item Excepci\'on 02: Datos inv\'alidos.
+				\end{enumerate}
+			\item El Sistema modifica el registro en la entidad [Category].
+			\item Fin del Caso de Uso.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Excepci\'on 01} \\
+		\begin{enumerate}
+			\item El Sistema determina que los datos de la forma [Editar Category (\ref{tab:ui-update-category-form})] est\'an incompletos.
+			\item El Sistema muestra los campos de la forma [Editar Category (\ref{tab:ui-update-category-form})] que son obligatorios.
+			\item Fin de la Excepci\'on.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Excepci\'on 02} \\
+		\begin{enumerate}
+			\item El Sistema determina que los datos de la forma [Editar Category (\ref{tab:ui-update-category-form})] son inv\'alidos.
+			\item El Sistema muestra los campos de la forma [Editar Category (\ref{tab:ui-update-category-form})] que son inv\'alidos e indica la raz\'on.
+			\item Fin de la Excepci\'on.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{figure}[H]
+		\begin{center}
+		 \label{tab:activity-update-ucd-entity-category}
+		 \includegraphics[width=0.5\textwidth]{use-cases/diagrams/UpdateActivityUCD-Product/Category.png}
+		 \caption{Diagrama de Actividades para Caso de Uso CUXX-03 Editar Category}
+		\end{center}
+	\end{figure}
+	
+	%% -----
+	%% Use Case: Delete
+	%% -----
+	\clearpage
+	\subsection{CUXX-04. Eliminar Category} \label{sec:cu-delete-Category}
+	
+	\begin{tabular}{ p{3.5cm} p{11.5cm} }
+		\textbf{Actores} & Operador\\
+		\textbf{Objetivo} & Eliminar Category.\\
+		\textbf{Evento Disparador} & El Operador solicita la p\'agina [Eliminar Category (\ref{tab:ui-delete-category-page})].\\
+		\textbf{Tipo} & Usuario\\
+		\textbf{Pre-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha registrado informaci\'on de [Category].
+			\end{itemize}
+			\end{minipage} \\
+		\textbf{Post-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha eliminado la informaci\'on de [Category].
+			\end{itemize}
+			\end{minipage} \\
+		\\
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Escenario Principal} \\
+		\begin{enumerate}
+			\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Category (\ref{sec:cu-search-Category})].
+			\item El Operador selecciona el comando [Eliminar].
+			\item El Sistema muestra la p\'agina [Eliminar Category (\ref{tab:ui-delete-category-page})].
+			\item El Operador elige el comando [Eliminar].
+			\item El Sistema elimina el registro de la entidad [Category].
+			\item Fin del Caso de Uso.
+		\end{enumerate}
+		\textbf{Escenario Excepci\'on 01} \\
+		\begin{enumerate}
+		   \item El Sistema determina que los datos de la forma [Eliminar Category (\ref{tab:ui-delete-category-form})] son v\'alidos.
+		   	\begin{enumerate}
+		   		\item Excepci\'on 01: No se pudo completar la eliminaci\'on.
+		    \end{enumerate}
+		   \item Fin del Caso de Uso.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{figure}[H]
+	  \begin{center}
+		 \label{tab:activity-delete-ucd-entity-category}
+		 \includegraphics[width=0.5\textwidth]{use-cases/diagrams/DeleteActivityUCD-Product/Category.png}
+		 \caption{Diagrama de Actividades para Caso de Uso CUXX-04 Eliminar Category}
+	  \end{center}
+	\end{figure}
+	
+	%% --------------------------------------------------------------------------------------------------
+	%% CRUD Use Cases: Product
+	%% --------------------------------------------------------------------------------------------------
+	\clearpage
+	\section{Administrar Product} \label{sec:cf-uc-admin-product}
+	
+	%% -----
+	%% Use Case: Search
+	%% -----
+	\subsection{CUXX-01. Buscar Product} \label{sec:cu-search-Product}
+	
+	\begin{tabular}{ p{3.5cm} p{11.5cm} }
+		\textbf{Actores} & Operador\\
+		\textbf{Objetivo} & Buscar Product.\\
+		\textbf{Evento Disparador} & El Operador solicita la p\'agina [Buscar Product (\ref{sec:ui-page-search-product})].\\
+		\textbf{Tipo} & Usuario\\
+		\textbf{Pre-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha registrado informaci\'on de [Product].
+			\end{itemize}
+			\end{minipage} \\
+		\textbf{Post-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha mostrado una lista de [Product] que cumplieron los criterios solicitados.
+			\end{itemize}
+			\end{minipage} \\
+		\\
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Escenario Principal} \\
+		\begin{enumerate}
+			\item El Sistema muestra la p\'agina [Buscar Product (\ref{sec:ui-page-search-product})].
+			\item El Operador captura informaci\'on en la forma [Criterios de B\'usqueda (\ref{tab:ui-search-criteria-product-form})].
+			\item El Operador elige el comando [Buscar].
+			\item El Sistema determina que los datos de la forma [Criterios de B\'usqueda (\ref{tab:ui-search-criteria-product-form})] est\'an completos.
+				\begin{enumerate}
+					\item Excepci\'on 01: Datos incompletos.
+				\end{enumerate}
+			\item El Sistema obtiene informaci\'on de acuerdo a los Criterios de B\'usqueda seleccionados.
+				\begin{enumerate}
+					\item Excepci\'on 02: No se encontr\'o informaci\'on.
+				\end{enumerate}
+			\item El Sistema muestra la lista [Resultados de B\'usqueda (\ref{tab:ui-search-results-product-form})].
+			\item Fin del Caso de Uso.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Excepci\'on 01. Datos incompletos} \\
+		\begin{enumerate}
+			\item El Sistema determina que los datos de la forma [Criterios de B\'usqueda (\ref{tab:ui-search-criteria-product-form})] est\'an incompletos.
+			\item El Sistema muestra los campos de la forma [Criterios de B\'usqueda (\ref{tab:ui-search-criteria-product-form})] que son obligatorios.
+			\item Fin de la Excepci\'on.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Excepci\'on 02. No se encontr\'o informaci\'on} \\
+		\begin{enumerate}
+			\item El Sistema no obtiene informaci\'on de acuerdo a los Criterios de B\'usqueda seleccionados.
+			\item El Sistema avisa que no encontr\'o informaci\'on [(\ref{tab:ui-nosearch-product-page})].
+			\item Fin de la Excepci\'on.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{figure}[H]
+		\begin{center}
+			\label{tab:activity-search-ucd-entity-product}
+			\includegraphics[width=0.5\textwidth]{use-cases/diagrams/SearchActivityUCD-Product/Product.png}
+			\caption{Diagrama de Actividades para Caso de Uso CUXX-01 Buscar Product}
+	\end{center}
+	\end{figure}
+	%% -----
+	%% Use Case: Create
+	%% -----
+	\clearpage
+	\subsection{CUXX-02. Agregar Product} \label{sec:cu-create-Product}
+	
+	\begin{tabular}{ p{3.5cm} p{11.5cm} }
+		\textbf{Actores} & Operador\\
+		\textbf{Objetivo} & Agregar Product.\\
+		\textbf{Evento Disparador} & El Operador solicita la p\'agina [Agregar Product (\ref{sec:ui-page-create-product})].\\
+		\textbf{Tipo} & Usuario\\
+		\textbf{Pre-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha registrado informaci\'on de [Category].
+			\end{itemize}
+			\end{minipage} \\
+		\textbf{Post-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha registrado informaci\'on de un [Product] nuevo.
+			\end{itemize}
+			\end{minipage} \\
+		\\
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Escenario Principal} \\
+		\begin{enumerate}
+			\item El Sistema muestra la p\'agina [Agregar Product (\ref{sec:ui-page-create-product})].
+			\item El Operador captura informaci\'on en la forma [Agregar Product (\ref{tab:ui-create-product-form})].
+			\item El Operador elige el comando [Agregar].
+			\item El Sistema determina que los datos de la forma [Agregar Product (\ref{tab:ui-create-product-form})] est\'an completos.
+				\begin{enumerate}
+					\item Excepci\'on 01: Datos incompletos.
+				\end{enumerate}
+			\item El Sistema determina que los datos de la forma [Agregar Product (\ref{tab:ui-create-product-form})] son v\'alidos.
+				\begin{enumerate}
+					\item Excepci\'on 02: Datos inv\'alidos.
+				\end{enumerate}
+			\item El Sistema crea un nuevo registro en la entidad [Product].
+			\item Fin del Caso de Uso.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Excepci\'on 01} \\
+		\begin{enumerate}
+			\item El Sistema determina que los datos de la forma [Agregar Product (\ref{tab:ui-create-product-form})] est\'an incompletos.
+			\item El Sistema muestra los campos de la forma [Agregar Product (\ref{tab:ui-create-product-form})] que son obligatorios.
+			\item Fin de la Excepci\'on.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Excepci\'on 02} \\
+		\begin{enumerate}
+			\item El Sistema determina que los datos de la forma [Agregar Product (\ref{tab:ui-create-product-form})] son inv\'alidos.
+			\item El Sistema muestra los campos de la forma [Agregar Product (\ref{tab:ui-create-product-form})] que son inv\'alidos e indica la raz\'on.
+			\item Fin de la Excepci\'on.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{figure}[H]
+		\begin{center}
+			\label{tab:activity-create-ucd-entity-product}
+			\includegraphics[width=0.5\textwidth]{use-cases/diagrams/CreateActivityUCD-Product/Product.png}
+			\caption{Diagrama de Actividades para Caso de Uso CUXX-02 Agregar Product}	
+	    \end{center}
+	\end{figure}
+			
+	
+	%% -----
+	%% Use Case: Update
+	%% -----
+	\clearpage
+	\subsection{CUXX-03. Editar Product} \label{sec:cu-update-Product}
+	
+	\begin{tabular}{ p{3.5cm} p{11.5cm} }
+		\textbf{Actores} & Operador\\
+		\textbf{Objetivo} & Editar Product.\\
+		\textbf{Evento Disparador} & El Operador solicita la p\'agina [Editar Product (\ref{sec:ui-page-update-product})].\\
+		\textbf{Tipo} & Usuario\\
+		\textbf{Pre-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha registrado informaci\'on de [Product].
+				\item Se ha registrado informaci\'on de [Category].
+			\end{itemize}
+			\end{minipage} \\
+		\textbf{Post-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha actualizado la informaci\'on de [Product].
+			\end{itemize}
+			\end{minipage} \\
+		\\
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Escenario Principal} \\
+		\begin{enumerate}
+			\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Product (\ref{sec:cu-search-Product})].
+			\item El Operador selecciona el comando [Editar].
+			\item El Sistema muestra la p\'agina [Editar Product (\ref{sec:ui-page-update-product})].
+			\item El Operador modifica informaci\'on en la forma [Editar Product (\ref{tab:ui-update-product-form})].
+			\item El Operador elige el comando [Agregar].
+			\item El Sistema determina que los datos de la forma [Editar Product (\ref{tab:ui-update-product-form})] est\'an completos.
+				\begin{enumerate}
+					\item Excepci\'on 01: Datos incompletos.
+				\end{enumerate}
+			\item El Sistema determina que los datos de la forma [Editar Product (\ref{tab:ui-update-product-form})] son v\'alidos.
+				\begin{enumerate}
+					\item Excepci\'on 02: Datos inv\'alidos.
+				\end{enumerate}
+			\item El Sistema modifica el registro en la entidad [Product].
+			\item Fin del Caso de Uso.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Excepci\'on 01} \\
+		\begin{enumerate}
+			\item El Sistema determina que los datos de la forma [Editar Product (\ref{tab:ui-update-product-form})] est\'an incompletos.
+			\item El Sistema muestra los campos de la forma [Editar Product (\ref{tab:ui-update-product-form})] que son obligatorios.
+			\item Fin de la Excepci\'on.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Excepci\'on 02} \\
+		\begin{enumerate}
+			\item El Sistema determina que los datos de la forma [Editar Product (\ref{tab:ui-update-product-form})] son inv\'alidos.
+			\item El Sistema muestra los campos de la forma [Editar Product (\ref{tab:ui-update-product-form})] que son inv\'alidos e indica la raz\'on.
+			\item Fin de la Excepci\'on.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{figure}[H]
+		\begin{center}
+		 \label{tab:activity-update-ucd-entity-product}
+		 \includegraphics[width=0.5\textwidth]{use-cases/diagrams/UpdateActivityUCD-Product/Product.png}
+		 \caption{Diagrama de Actividades para Caso de Uso CUXX-03 Editar Product}
+		\end{center}
+	\end{figure}
+	
+	%% -----
+	%% Use Case: Delete
+	%% -----
+	\clearpage
+	\subsection{CUXX-04. Eliminar Product} \label{sec:cu-delete-Product}
+	
+	\begin{tabular}{ p{3.5cm} p{11.5cm} }
+		\textbf{Actores} & Operador\\
+		\textbf{Objetivo} & Eliminar Product.\\
+		\textbf{Evento Disparador} & El Operador solicita la p\'agina [Eliminar Product (\ref{tab:ui-delete-product-page})].\\
+		\textbf{Tipo} & Usuario\\
+		\textbf{Pre-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha registrado informaci\'on de [Product].
+			\end{itemize}
+			\end{minipage} \\
+		\textbf{Post-condiciones} &
+			\begin{minipage}[t]{0.6\textwidth}
+			\begin{itemize}[noitemsep,nolistsep]
+			\setlength{\itemindent}{-.5cm}
+				\item Se ha eliminado la informaci\'on de [Product].
+			\end{itemize}
+			\end{minipage} \\
+		\\
+	\end{tabular}
+	
+	\begin{tabular}{ p{15.5cm} }
+		\textbf{Escenario Principal} \\
+		\begin{enumerate}
+			\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Product (\ref{sec:cu-search-Product})].
+			\item El Operador selecciona el comando [Eliminar].
+			\item El Sistema muestra la p\'agina [Eliminar Product (\ref{tab:ui-delete-product-page})].
+			\item El Operador elige el comando [Eliminar].
+			\item El Sistema elimina el registro de la entidad [Product].
+			\item Fin del Caso de Uso.
+		\end{enumerate}
+		\textbf{Escenario Excepci\'on 01} \\
+		\begin{enumerate}
+		   \item El Sistema determina que los datos de la forma [Eliminar Product (\ref{tab:ui-delete-product-form})] son v\'alidos.
+		   	\begin{enumerate}
+		   		\item Excepci\'on 01: No se pudo completar la eliminaci\'on.
+		    \end{enumerate}
+		   \item Fin del Caso de Uso.
+		\end{enumerate}
+	\end{tabular}
+	
+	\begin{figure}[H]
+	  \begin{center}
+		 \label{tab:activity-delete-ucd-entity-product}
+		 \includegraphics[width=0.5\textwidth]{use-cases/diagrams/DeleteActivityUCD-Product/Product.png}
+		 \caption{Diagrama de Actividades para Caso de Uso CUXX-04 Eliminar Product}
+	  \end{center}
+	\end{figure}
+	

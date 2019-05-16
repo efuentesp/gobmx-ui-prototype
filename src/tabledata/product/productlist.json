@@ -1,0 +1,98 @@
+{
+	"ids": [
+		{
+			"id": "productlist",
+			"headers": [
+				{
+					"label": "Picture",
+					"required": "true"
+				},
+				{
+					"label": "Name",
+					"required": "true"
+				},
+				{
+					"label": "Description",
+					"required": "true"
+				}
+			],
+			"rows": [
+				{
+					"id": "69HZxiDp",
+					"data": [
+						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+						"Synergistic Linen Bench",
+						"Cum est exercitationem eaque incidunt provident sunt quia. Sequi voluptatum voluptatem qui. Aut et magnam nemo nihil. Amet perspiciatis voluptas eos tempora quasi molestiae."
+					]
+				},
+				{
+					"id": "qq0Ywk7V",
+					"data": [
+						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+						"Incredible Steel Knife",
+						"Voluptatem voluptatibus voluptatem eos. Est molestias nisi. Eum quibusdam repudiandae error dolore. Ad hic voluptas. Aperiam sunt qui error ratione nam."
+					]
+				},
+				{
+					"id": "7Ok23f5t",
+					"data": [
+						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+						"Mediocre Marble Pants",
+						"Eum occaecati dolorem minima aliquam. Eius itaque beatae. Tempore porro autem provident. Nihil eligendi non aut. Dolorum cum et commodi blanditiis ea rem."
+					]
+				},
+				{
+					"id": "L1xsSkIM",
+					"data": [
+						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+						"Enormous Aluminum Watch",
+						"Saepe et quisquam reiciendis. Exercitationem fuga omnis nesciunt amet quia. Dolor sit est animi quia laudantium ratione nostrum. Ipsam natus aperiam assumenda sed. Beatae assumenda quo et ut recusandae ea."
+					]
+				},
+				{
+					"id": "fMLro44w",
+					"data": [
+						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+						"Durable Leather Gloves",
+						"Quibusdam et voluptas necessitatibus exercitationem distinctio voluptatem. Quisquam tenetur optio neque ut. Magni tempore molestiae non ea vel. Ducimus dolore est id impedit asperiores suscipit."
+					]
+				},
+				{
+					"id": "dik6eIHi",
+					"data": [
+						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+						"Intelligent Wool Lamp",
+						"Sint excepturi dicta quod voluptatem. Inventore rem natus. Vitae sed ab molestiae ea est. Quis eos quas animi. Quasi voluptate et."
+					]
+				},
+				{
+					"id": "cbdhATKV",
+					"data": [
+						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+						"Intelligent Silk Bench",
+						"Et qui ad nisi voluptatem. Nisi unde dolorum nisi quod in vel autem. Reiciendis ut in qui."
+					]
+				},
+				{
+					"id": "RfVg3UYA",
+					"data": [
+						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+						"Sleek Paper Gloves",
+						"Voluptas quisquam natus fugiat. Qui aut animi ullam velit vel. Iusto quam illo dolor molestiae quasi nemo."
+					]
+				}
+			]
+			,"actions": [
+				{
+					"group": "Acciones",
+					"actions": [
+						{
+							"label": "See details",
+							"link": "/product/productscreen/"
+						}
+					]
+				}
+			]
+		}
+	]
+}

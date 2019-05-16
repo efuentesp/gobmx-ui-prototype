@@ -1,0 +1,489 @@
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: ShoppingCart
+%% --------------------------------------------------------------------------------------------------
+%%\clearpage
+\section{Administrar ShoppingCart} \label{sec:cf-ui-admin-shoppingcart}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar ShoppingCart} \label{sec:ui-page-search-shoppingcart}
+
+\textbf{Descripci\'on}: P\'agina para Buscar ShoppingCart.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-shoppingcart-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/ShoppingCart-Screenshots.js/ShoppingCart-Admin.png}
+	\caption{P\'agina Buscar ShoppingCart}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Criterios de B\'usqueda}
+	\label{tab:ui-search-criteria-shoppingcart-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		SubTotal &
+		TextBox &
+		Currency &
+		ShoppingCart.SubTotal \\
+		TaxAmount &
+		TextBox &
+		Currency &
+		ShoppingCart.TaxAmount \\
+		DiscountAmount &
+		TextBox &
+		Currency &
+		ShoppingCart.DiscountAmount \\
+		TotalAmount &
+		TextBox &
+		Currency &
+		ShoppingCart.TotalAmount \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Lista: Resultados de B\'usqueda}
+	\label{tab:ui-search-results-shoppingcart-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		SubTotal &
+		ShoppingCart.SubTotal \\
+		TaxAmount &
+		ShoppingCart.TaxAmount \\
+		DiscountAmount &
+		ShoppingCart.DiscountAmount \\
+		TotalAmount &
+		ShoppingCart.TotalAmount \\
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Agregar ShoppingCart} \label{sec:ui-page-create-shoppingcart}
+
+\textbf{Descripci\'on}: P\'agina para Agregar ShoppingCart.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-shoppingcart-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/ShoppingCart-Screenshots.js/ShoppingCart-Add.png}
+	\caption{P\'agina Agregar ShoppingCart}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Agregar ShoppingCart}
+	\label{tab:ui-create-shoppingcart-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Customer &
+		Modal &
+		Entity &
+		 &
+		ShoppingCart.Customer \\
+		ProductsOnCart &
+		Modal &
+		Entity &
+		 &
+		ShoppingCart.ProductsOnCart \\
+		SubTotal &
+		TextBox &
+		Currency &
+		 &
+		ShoppingCart.SubTotal \\
+		TaxAmount &
+		TextBox &
+		Currency &
+		 &
+		ShoppingCart.TaxAmount \\
+		DiscountAmount &
+		TextBox &
+		Currency &
+		 &
+		ShoppingCart.DiscountAmount \\
+		TotalAmount &
+		TextBox &
+		Currency &
+		 &
+		ShoppingCart.TotalAmount \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar ShoppingCart} \label{sec:ui-page-update-shoppingcart}
+
+\textbf{Descripci\'on}: P\'agina para Editar ShoppingCart.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-shoppingcart-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/ShoppingCart-Screenshots.js/ShoppingCart-Edit.png}
+	\caption{P\'agina Editar ShoppingCart}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Editar ShoppingCart}
+	\label{tab:ui-update-shoppingcart-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Customer &
+		Modal &
+		Entity &
+		 &
+		ShoppingCart.Customer \\
+		ProductsOnCart &
+		Modal &
+		Entity &
+		 &
+		ShoppingCart.ProductsOnCart \\
+		SubTotal &
+		TextBox &
+		Currency &
+		 &
+		ShoppingCart.SubTotal \\
+		TaxAmount &
+		TextBox &
+		Currency &
+		 &
+		ShoppingCart.TaxAmount \\
+		DiscountAmount &
+		TextBox &
+		Currency &
+		 &
+		ShoppingCart.DiscountAmount \\
+		TotalAmount &
+		TextBox &
+		Currency &
+		 &
+		ShoppingCart.TotalAmount \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar ShoppingCart} \label{sec:ui-page-delete-shoppingcart}
+
+\textbf{Descripci\'on}: P\'agina para Eliminar ShoppingCart.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-shoppingcart-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/ShoppingCart-Screenshots.js/ShoppingCart-Delete.png}
+	\caption{P\'agina Eliminar ShoppingCart}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Eliminar ShoppingCart}
+	\label{tab:ui-delete-shoppingcart-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Customer &
+		Label &
+		Entity &
+		&
+		ShoppingCart.Customer \\
+		ProductsOnCart &
+		Label &
+		Entity &
+		&
+		ShoppingCart.ProductsOnCart \\
+		SubTotal &
+		Label &
+		Currency &
+		&
+		ShoppingCart.SubTotal \\
+		TaxAmount &
+		Label &
+		Currency &
+		&
+		ShoppingCart.TaxAmount \\
+		DiscountAmount &
+		Label &
+		Currency &
+		&
+		ShoppingCart.DiscountAmount \\
+		TotalAmount &
+		Label &
+		Currency &
+		&
+		ShoppingCart.TotalAmount \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: ProductOnCart
+%% --------------------------------------------------------------------------------------------------
+%%\clearpage
+\section{Administrar ProductOnCart} \label{sec:cf-ui-admin-productoncart}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar ProductOnCart} \label{sec:ui-page-search-productoncart}
+
+\textbf{Descripci\'on}: P\'agina para Buscar ProductOnCart.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-productoncart-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/ShoppingCart-Screenshots.js/ProductOnCart-Admin.png}
+	\caption{P\'agina Buscar ProductOnCart}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Criterios de B\'usqueda}
+	\label{tab:ui-search-criteria-productoncart-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Price &
+		TextBox &
+		Currency &
+		ProductOnCart.Price \\
+		Total &
+		TextBox &
+		Currency &
+		ProductOnCart.Total \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Lista: Resultados de B\'usqueda}
+	\label{tab:ui-search-results-productoncart-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Price &
+		ProductOnCart.Price \\
+		Total &
+		ProductOnCart.Total \\
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Agregar ProductOnCart} \label{sec:ui-page-create-productoncart}
+
+\textbf{Descripci\'on}: P\'agina para Agregar ProductOnCart.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-productoncart-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/ShoppingCart-Screenshots.js/ProductOnCart-Add.png}
+	\caption{P\'agina Agregar ProductOnCart}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Agregar ProductOnCart}
+	\label{tab:ui-create-productoncart-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		ShoppingCart &
+		Modal &
+		Entity &
+		 &
+		ProductOnCart.ShoppingCart \\
+		Product &
+		Modal &
+		Entity &
+		 &
+		ProductOnCart.Product \\
+		Price &
+		TextBox &
+		Currency &
+		 &
+		ProductOnCart.Price \\
+		Quantity &
+		TextBox &
+		Integer &
+		 &
+		ProductOnCart.Quantity \\
+		Total &
+		TextBox &
+		Currency &
+		 &
+		ProductOnCart.Total \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar ProductOnCart} \label{sec:ui-page-update-productoncart}
+
+\textbf{Descripci\'on}: P\'agina para Editar ProductOnCart.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-productoncart-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/ShoppingCart-Screenshots.js/ProductOnCart-Edit.png}
+	\caption{P\'agina Editar ProductOnCart}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Editar ProductOnCart}
+	\label{tab:ui-update-productoncart-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		ShoppingCart &
+		Modal &
+		Entity &
+		 &
+		ProductOnCart.ShoppingCart \\
+		Product &
+		Modal &
+		Entity &
+		 &
+		ProductOnCart.Product \\
+		Price &
+		TextBox &
+		Currency &
+		 &
+		ProductOnCart.Price \\
+		Quantity &
+		TextBox &
+		Integer &
+		 &
+		ProductOnCart.Quantity \\
+		Total &
+		TextBox &
+		Currency &
+		 &
+		ProductOnCart.Total \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar ProductOnCart} \label{sec:ui-page-delete-productoncart}
+
+\textbf{Descripci\'on}: P\'agina para Eliminar ProductOnCart.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-productoncart-page}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{ui-specs/ui-screenshots/ShoppingCart-Screenshots.js/ProductOnCart-Delete.png}
+	\caption{P\'agina Eliminar ProductOnCart}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma Eliminar ProductOnCart}
+	\label{tab:ui-delete-productoncart-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		ShoppingCart &
+		Label &
+		Entity &
+		&
+		ProductOnCart.ShoppingCart \\
+		Product &
+		Label &
+		Entity &
+		&
+		ProductOnCart.Product \\
+		Price &
+		Label &
+		Currency &
+		&
+		ProductOnCart.Price \\
+		Quantity &
+		Label &
+		Integer &
+		&
+		ProductOnCart.Quantity \\
+		Total &
+		Label &
+		Currency &
+		&
+		ProductOnCart.Total \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+

@@ -1,0 +1,19 @@
+@startumlstart
+start
+:El Operador selecciona el registro a modificar;
+:El Sistema obtiene y muestra el detalle en la página [Editar CreditCard];
+:El Operador modifica información en la forma [Editar CreditCard];
+while (Datos incompletos?) is (SI)  
+	:El Sistema muestra los campos de la forma\n [Editar CreditCard] que son obligatorios;  
+	:El Operador modifica información en la forma [Editar CreditCard];
+endwhile (NO)  
+
+	if (Datos válidos?) then (SI)    
+		:El Sistema modifica el registro\n en la entidad [CreditCard];  
+	else (NO)    
+		:El Sistema muestra los campos de la forma\n [Editar CreditCard] que son inválidos e indica la razón;    
+		end  
+	endif
+stop
+@enduml
+

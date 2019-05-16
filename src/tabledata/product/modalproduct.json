@@ -1,0 +1,84 @@
+
+	{
+		"ids":[
+			{
+				"id": "product-results",
+				"headers": [
+				{ "label": "Sku" },
+				{ "label": "Name" }
+				],
+				"rows": [
+					{
+						"id": "1",
+						"data": [
+							"0993532012",
+							"Sit vitae ex quis ratione magnam."
+						]
+					},
+					{
+						"id": "2",
+						"data": [
+							"1178453200",
+							"Est odio minus dolores vel expedita accusantium doloribus."
+						]
+					},
+					{
+						"id": "3",
+						"data": [
+							"1991228414",
+							"Omnis eveniet molestiae dolores commodi."
+						]
+					},
+					{
+						"id": "4",
+						"data": [
+							"199640637X",
+							"Possimus sequi fugiat occaecati dolor eum labore consequatur."
+						]
+					},
+					{
+						"id": "5",
+						"data": [
+							"0724027734",
+							"Sit autem ea debitis id quasi alias aperiam."
+						]
+					},
+					{
+						"id": "6",
+						"data": [
+							"1868105199",
+							"Accusamus placeat facere sit explicabo eaque."
+						]
+					},
+					{
+						"id": "7",
+						"data": [
+							"1827834021",
+							"Quis voluptatem est possimus dolor distinctio eveniet."
+						]
+					},
+					{
+						"id": "8",
+						"data": [
+							"0716936208",
+							"Veniam quo est."
+						]
+					},
+					{
+						"id": "9",
+						"data": [
+							"1851540571",
+							"Iusto excepturi possimus est sequi reiciendis."
+						]
+					},
+					{
+						"id": "10",
+						"data": [
+							"1001699475",
+							"Animi quam ex ducimus ratione aspernatur minima."
+						]
+					}
+				]
+			}
+		]
+	}

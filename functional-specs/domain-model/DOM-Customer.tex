@@ -1,0 +1,162 @@
+%% --------------------------------------------------------------------------------------------------
+%% M\'odulo: Customer
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Modelo de Dominio} \label{sec:dom-customer}
+\begin{figure}[H]
+\begin{center}
+	\label{tab:uml-domain-model}
+	\includegraphics[width=0.95\textwidth,height=0.70\textheight]{domain-model/DOM-Customer/domain-model.png}
+	\caption{Diagrama del Modelo de Dominio}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+		\begin{center}
+			\label{tab:uml-domain-model}
+			\includegraphics[width=0.95\textwidth,height=0.70\textheight]{domain-model/DOM-Customer/domain-model-enum.png}
+			\caption{Diagrama del Modelo de Dominio Enums}
+		\end{center}
+\end{figure}
+\begin{table}[H]
+			\caption{Campos Calculados con Regla de Negocio}
+			\label{tab:entities}
+			%\resizebox{\textwidth}{!}{
+			\begin{center}
+			\begin{tabularx}{0.90\linewidth}{ X X X X}
+				\hline
+				\textbf{Entidad} & \textbf{Campo} & \textbf{C\'odigo} & \textbf{Descripci\'on} \\
+				\hline
+				\hline
+			\end{tabularx}
+			\end{center}
+			%}
+\end{table}
+
+\clearpage
+\section{Descripci\'on de las Entidades de Negocio} \label{sec:dom-entities-customer}
+
+\begin{table}[H]
+	\caption{Entidades del Modelo de Dominio}
+	\label{tab:entities}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabularx}{0.90\linewidth}{ X X }
+		\hline
+		\textbf{Entidad} & \textbf{Descripci\'on} \\
+		\hline
+		Customer (\ref{tab:fields-dom-Customer}) & Customer \\
+		CreditCard (\ref{tab:fields-dom-CreditCard}) & CreditCard \\
+		\hline
+	\end{tabularx}
+	\end{center}
+	%}
+\end{table}
+\section{Campos por Entidad de Negocio} \label{sec:entity-fields-customer}
+
+\begin{table}[H]
+	\caption{Entidad de Negocio Customer}
+	\label{tab:fields-dom-Customer}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabularx}{0.90\linewidth}{ X X X X X }
+		\hline
+		\textbf{Campo} &
+		\textbf{Etiqueta} &
+		\textbf{Tipo} &
+		\textbf{Restricciones} &
+		\textbf{Descripci\'on} \\
+		\hline
+		EmailAddress &
+		EmailAddress &
+		Email &
+		 &
+		EmailAddress \\
+		FullName &
+		FullName &
+		Text &
+		 &
+		FullName \\
+		PhoneNumber &
+		PhoneNumber &
+		Text &
+		 &
+		PhoneNumber \\
+		Address1 &
+		Address1 &
+		Text &
+		 &
+		Address1 \\
+		Address2 &
+		Address2 &
+		Text &
+		\begin{minipage}[t]{0.2\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Required: false
+		\end{itemize}
+		\end{minipage}
+		 &
+		Address2 \\
+		City &
+		City &
+		Text &
+		 &
+		City \\
+		State &
+		State &
+		Text &
+		 &
+		State \\
+		PostalCode &
+		PostalCode &
+		Text &
+		 &
+		PostalCode \\
+		Country &
+		Country &
+		Text &
+		 &
+		Country \\
+		\hline
+	\end{tabularx}
+	\end{center}
+	%}
+\end{table}
+\begin{table}[H]
+	\caption{Entidad de Negocio CreditCard}
+	\label{tab:fields-dom-CreditCard}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabularx}{0.90\linewidth}{ X X X X X }
+		\hline
+		\textbf{Campo} &
+		\textbf{Etiqueta} &
+		\textbf{Tipo} &
+		\textbf{Restricciones} &
+		\textbf{Descripci\'on} \\
+		\hline
+		CardName &
+		CardName &
+		Text &
+		 &
+		CardName \\
+		CardNumber &
+		CardNumber &
+		Text &
+		 &
+		CardNumber \\
+		ExpirationDate &
+		ExpirationDate &
+		Date &
+		 &
+		ExpirationDate \\
+		CVV &
+		CVV &
+		Text &
+		 &
+		CVV \\
+		\hline
+	\end{tabularx}
+	\end{center}
+	%}
+\end{table}

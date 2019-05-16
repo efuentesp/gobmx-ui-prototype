@@ -1,0 +1,17 @@
+@startuml
+	left to right direction
+	skinparam packageStyle rectangle
+	Operador <<persona>> as Actor
+	rectangle {
+		(Agregar ShoppingCart) as CreateUC <<usuario>>
+		(Editar ShoppingCart) as EditUC <<usuario>>
+		(Buscar ShoppingCart) as SearchUC <<usuario>>
+		(Eliminar ShoppingCart) as DeleteUC <<usuario>>
+		Actor -> CreateUC
+		Actor -> EditUC
+		Actor -> SearchUC
+		Actor --> DeleteUC
+		EditUC .> SearchUC : include
+		DeleteUC .> SearchUC : include
+	}
+@enduml

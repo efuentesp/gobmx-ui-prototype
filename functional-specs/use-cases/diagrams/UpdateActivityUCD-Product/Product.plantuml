@@ -1,0 +1,19 @@
+@startumlstart
+start
+:El Operador selecciona el registro a modificar;
+:El Sistema obtiene y muestra el detalle en la página [Editar Product];
+:El Operador modifica información en la forma [Editar Product];
+while (Datos incompletos?) is (SI)  
+	:El Sistema muestra los campos de la forma\n [Editar Product] que son obligatorios;  
+	:El Operador modifica información en la forma [Editar Product];
+endwhile (NO)  
+
+	if (Datos válidos?) then (SI)    
+		:El Sistema modifica el registro\n en la entidad [Product];  
+	else (NO)    
+		:El Sistema muestra los campos de la forma\n [Editar Product] que son inválidos e indica la razón;    
+		end  
+	endif
+stop
+@enduml
+
