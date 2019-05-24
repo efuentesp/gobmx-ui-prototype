@@ -19,7 +19,7 @@
 </modal-box>
 
 <search-box>
-  <div class="col-sm-3 form-group divSearchStyle">
+  <!--div class="col-sm-3 form-group divSearchStyle"-->
     <div class="col-sm-9 form-group divSearchStyle">
       <input type="text" class="form-control" placeholder={opts.placeholder} >
     </div>
@@ -28,7 +28,7 @@
         <i class="icon-search"></i>
       </button>
     </div>
-  </div>
+  <!--/div-->
 
   <style>
      .divSearchStyle{

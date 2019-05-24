@@ -1,6 +1,6 @@
 <menu-item>
-  <!--li>
+  <li>
 		<a href={opts.to}>{ opts.label }</a>
 	</li>
-  <yield/-->
+  <yield/>
 </menu-item>
