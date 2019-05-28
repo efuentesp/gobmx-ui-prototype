@@ -9,7 +9,7 @@
 			background-color: #2A3F54;
 		}
 	</style-->
-  <style>
+  <!--style>
     menu-item > li > a {
       background-image: none;
       text-decoration: none;
@@ -37,10 +37,10 @@
       text-decoration: none;
       color: #000000;
     }
-  </style>	
+  </style-->	
 	
 
-	<div class="main_container">
+	<!--div class="main_container">
 		<div class="col-md-3 left_col">
 			<div class="left_col scroll-view">
 				<div class="navbar nav_title" style="border: 0;">
@@ -49,5 +49,5 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>        
-	</div>
+	</div-->
 </app>
