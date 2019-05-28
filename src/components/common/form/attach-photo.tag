@@ -6,10 +6,11 @@
 	<div class="input-group" id={ opts.id }>
 		<span class="input-group-btn">
 			<span class="btn btn-default btn-file">
-				<i class="fa fa-file-image-o"></i> Buscar... <input type="file" id={ opts.id }/>
+				<!--i class="fa fa-file-image-o"> Buscar... </i-->
+				<input type="file" id={ opts.id }/>
 			</span>
 		</span>
-		<input type="text" id={ "url-input-" + opts.id } class="form-control" readonly>
+		<!--input type="text" id={ "url-input-" + opts.id } class="form-control" readonly-->
 	</div>
 	<span id={ "error-msg-" + opts.id } class="help-block"></span>
 

@@ -20,11 +20,11 @@
 
 <search-box>
   <!--div class="col-sm-3 form-group divSearchStyle"-->
-    <div class="col-sm-9 form-group divSearchStyle">
+    <div class="col-sm-11 form-group divSearchStyle">
       <input type="text" class="form-control" placeholder={opts.placeholder} >
     </div>
-    <div class="col-sm-3 form-group divSearchStyle">
-      <button type="button" class="btn btn-default btn-sm" style="margin-left: 5px;" data-toggle="modal" data-target=".{opts.link}">
+    <div class="col-sm-1 form-group divSearchStyle">
+      <button type="button" class="btn btn-default btn-sm" style="margin-left: 11px;" data-toggle="modal" data-target=".{opts.link}">
         <i class="icon-search"></i>
       </button>
     </div>

@@ -9,8 +9,8 @@
              &nbsp;&nbsp;
            </th>
            <th each={headers}> {label} </th>
-           <th></th>
-           <th></th>
+           <th if={opts.edit || opts.delete}></th>
+           <th if={actions!=null && actions.length > 0}></th>
          </tr>
        </thead>
        <tbody>
@@ -24,11 +24,11 @@
            <td each={d , i in data }>
              {d}
            </td>
-           <td class="centerColumnTable">
+           <td class="centerColumnTable" if={opts.edit || opts.delete}>
                <edit-button if={opts.edit} to={ opts.edit }></edit-button>
                <delete-button if={opts.delete} to={ opts.delete }></delete-button>
            </td>
-           <td class="centerColumnTable">
+           <td class="centerColumnTable" if={actions.length > 0}>
               <div style="position:relative">
                <button  each={actions}  data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle botonTabla" type="button" aria-expanded="false" >
                  <!--i class="glyphicon glyphicon-flash"></i-->
