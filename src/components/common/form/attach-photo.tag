@@ -1,7 +1,8 @@
 <attach-photo>
 	<!-- File input field -->
 	
-	<label>{ opts.label }</label>
+	<label if={ opts.required == 'true'}>{ opts.label}<font color="red"> *</font></label>
+	<label if={ opts.required == 'false'}>{ opts.label }</label>
 	
 	<div class="input-group" id={ opts.id }>
 		<span class="input-group-btn">
