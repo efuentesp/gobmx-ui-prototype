@@ -4,7 +4,7 @@
 
 <searchcriteria>
   <panel label="Criterios de búsqueda">
-    <formbox title="Búsqueda" action="" return="/cliente-admin/" >
+	<formbox title="Criterios de búsqueda" action="search" return="">
         <row>
           <column size="col-md-12 col-xs-12">
             <yield/>
