@@ -6,7 +6,8 @@
 		<span class= { iboxClass() }>
 			<i class={ iboxIcon() }></i>
 		</span>
-		<input type={opts.type} name={opts.id}3 class="form-control" name={opts.id}1 placeholder={opts.placeholder} value={opts.value} >
+		<input if={ opts.required == 'true'} type={opts.type} name={opts.id}3 class="form-control requiredfield" name={opts.id}1 placeholder={opts.placeholder} value={opts.value} >
+		<input if={ opts.required == 'false'} type={opts.type} name={opts.id}3 class="form-control" name={opts.id}1 placeholder={opts.placeholder} value={opts.value} >
 	</div>
 	<span id={opts.id}2 class="help-block"></span>
 
