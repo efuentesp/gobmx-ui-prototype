@@ -1,6 +1,6 @@
 <inputbox>
 
-	<label if={ opts.required == 'true'}   for={opts.type}>{ opts.label}<font color="red"> *</font></label>
+  <label if={ opts.required == 'true'}   for={opts.type}>{ opts.label} <font class="lblIBFNT"> *</font></label>
   <label if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.label }</label>
 	<div class={ iBoxDiv() } id={opts.id}>
 		<span class= { iboxClass() }>
@@ -154,11 +154,16 @@
 		function checkEmptyValue(){
 			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
 			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
+			var myLbl = document.getElementById('idFnt'+opts.id);
 
 			if ( ! myInputText.value && opts.required.toLowerCase() == 'true' ) {
 				mySpan.textContent = "Campo requerido";
+				myInputText.style = "border: 1px solid red;";
+				myLbl.style = "color: red;"				
 			} else {
 				mySpan.textContent = "";
+				myInputText.style = "";
+				myLbl.style = ""				
 			}
 		}
 
@@ -282,4 +287,18 @@
 		}
 	})
   </script>
+  
+  <style>
+	inputbox:hover>label>font[class~=lblIBFNT] {
+        color:red !important;
+    }
+
+	inputbox:hover div > input[class~=requiredfield] {
+		border: 1px solid red !important;
+    }
+
+	inputbox > span[class~=help-block] {
+		color: red !important;
+	}
+  </style>  
 </inputbox>

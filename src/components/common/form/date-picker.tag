@@ -1,5 +1,5 @@
 <date-picker>
-	<label if={ opts.required == 'true'}   for={opts.type}>{ opts.label}<font color="red"> *</font></label>
+	<label if={ opts.required == 'true'}   for={opts.type}>{ opts.label}<font class="lblDPFNT"> *</font></label>
 	<label if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.label }</label>
 	<fieldset>		
 		<div id={ opts.id } class="input-group">
@@ -60,5 +60,14 @@
 		.form-control-feedback.left {
 			left: 1px;
 		}
+		
+		date-picker:hover>label>font[class~=lblDPFNT] {
+			color:red !important;
+		}
+
+		date-picker[required~="true"]:hover fieldset div  {
+			border: 1px solid red !important;
+			border-radius: 5px !important;
+		}		
 	</style>
 </date-picker>
