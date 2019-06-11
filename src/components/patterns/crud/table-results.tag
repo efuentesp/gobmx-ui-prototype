@@ -22,7 +22,7 @@
                <input type="checkbox" class="flat" name="table_records">
            </td>
            <td each={d , i in data }>
-             {d}
+             <raw html="{d}"></html>
            </td>
            <td class="centerColumnTable" if={opts.edit || opts.delete}>
                <edit-button if={opts.edit} to={ opts.edit }></edit-button>

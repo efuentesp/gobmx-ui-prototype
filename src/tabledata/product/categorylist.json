@@ -1,86 +1,37 @@
 {
-	"ids": [
-		{
-			"id": "categorylist",
-			"headers": [
-				{
-					"label": "Picture",
-					"required": "true"
-				},
-				{
-					"label": "Name",
-					"required": "true"
-				}
-			],
-			"rows": [
-				{
-					"id": "GEg7Du0V",
-					"data": [
-						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
-						"Clothing & Games"
-					]
-				},
-				{
-					"id": "o1Vsd5pv",
-					"data": [
-						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
-						"Computers, Garden & Health"
-					]
-				},
-				{
-					"id": "3q9WaFqS",
-					"data": [
-						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
-						"Industrial & Jewelry"
-					]
-				},
-				{
-					"id": "ETQwuucM",
-					"data": [
-						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
-						"Books, Garden & Movies"
-					]
-				},
-				{
-					"id": "VICZAAQw",
-					"data": [
-						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
-						"Electronics & Toys"
-					]
-				},
-				{
-					"id": "LnylNTuk",
-					"data": [
-						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
-						"Toys"
-					]
-				},
-				{
-					"id": "7PeJENt0",
-					"data": [
-						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
-						"Industrial"
-					]
-				},
-				{
-					"id": "UsoTjCum",
-					"data": [
-						"https://fakeimg.pl/150x150/?text=Picture&font=lobster",
-						"Beauty"
-					]
-				}
-			]
-			,"actions": [
-				{
-					"group": "Acciones",
-					"actions": [
-						{
-							"label": "Show",
-							"link": "/product/productlistscreen/"
-						}
-					]
-				}
-			]
-		}
-	]
+  "ids": [
+    {
+      "id": "categorylist",
+      "headers": [
+        {
+          "label": "Picture",
+          "required": "true"
+        },
+        {
+          "label": "Name",
+          "required": "true"
+        }
+      ],
+      "rows": [
+        {
+          "id": "GEg7Du0V",
+          "data": [
+            "https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+            "Clothing & Games"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "group": "Acciones",
+          "actions": [
+            {
+              "label": "Show",
+              "link": "/product/productlistscreen/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
